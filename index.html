@@ -15,140 +15,503 @@
 
   <script type="text/babel">
     const { useState } = React;
-    const { Heart, Search, BookOpen, ArrowRight, FileText, ExternalLink, GraduationCap, Users, TrendingUp } = lucide;
 
     const interventions = [
       {
-        id: 1,
-        title: "GO Solve Word Problems",
-        study: "Fede, J. L., Pierce, M. E., Matthews, W. J., & Wells, C. S. (2013). The Effects of a Computer-Assisted, Schema-Based Instruction Intervention on Word Problem-Solving Skills of Low-Performing Fifth Grade Students. Journal of Special Education Technology, 28(1), 9-21.",
-        studyLink: "https://doi.org/10.1177/016264341302800102",
-        description: "Uses a carefully sequenced approach to teach math word problem-solving, guiding students through step-by-step tutorials, worked examples, and interactive practice.",
-        fullDescription: "GO Solve Word Problems uses a carefully sequenced approach to teach math word problem-solving, guiding students through step-by-step tutorials, worked examples, and interactive practice. Each module builds on prior learning, beginning with short animated lessons that introduce problem types, followed by targeted practice and review. Visual models, such as graphic organizers, help students represent mathematical relationships, and students must meet clear performance benchmarks before progressing. This consistent, scaffolded structure helps ensure students develop a solid understanding of how to approach and solve different types of word problems.",
-        implementation: "The intervention was implemented over a 12-week period, with students in the experimental group using the GO Solve Word Problems software twice a week for 30-minute sessions during school hours.",
-        sample: "32 fifth-grade students from one middle school in Western Massachusetts. All students were identified as struggling with word problems.",
-        outcome: "MCAS Word Problem Subset – A researcher-selected subset of word problems from past Massachusetts Comprehensive Assessment System (MCAS) tests.",
-        effectSize: "+0.46 SD"
+        id: 36833706,
+        title: "Teacher-Facilitated Math Software for Grade 6",
+        study: "Afzal, M. T., & Gondal, M. B. (2010). Effect of mathematics software facilitated teaching on students learning. The International Journal of Technology, Knowledge and Society, 6(3).",
+        studyLink: "https://doi.org/10.18848/1832-3669/CGP/v06i03/56125",
+        description: "Interactive math software combined with active teacher support, where teachers regularly explain concepts, answer questions, and reinforce learning while students work on computers.",
+        whatItDoes: "This program uses interactive math software alongside active teacher support. Students learn math concepts on the computer, while the teacher regularly steps in to explain ideas, answer questions, and reinforce learning using familiar classroom tools. A lab assistant helps with technical issues so students can stay focused on learning.",
+        howItWasUsed: "Students worked on software-based lessons covering integers, algebra, and geometry. Instruction took place three times per week in a computer lab. Teachers stayed actively involved throughout each session rather than letting students work entirely on their own.",
+        whoItWasTestedWith: "The study included 312 sixth-grade students from four public schools in Punjab Province, Pakistan. Schools represented both urban and rural settings and included boys' and girls' schools.",
+        whatWasMeasured: "Student learning was measured using a math test created by the researchers. The test assessed students' ability to remember, understand, and apply math concepts and included multiple-choice, short-answer, and longer problem-solving questions.",
+        howWellItWorked: "Students who received teacher-facilitated math software instruction performed better on math achievement than students taught with traditional instruction or self-paced computer instruction. The size of the improvement was moderate, with an estimated effect size of 0.50, and a 95% confidence interval from 0.22 to 0.77.",
+        effectSize: "+0.50 SD",
+        effectLabel: "Large Effect",
+        tags: {
+          gradeLevel: ["Middle School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Blended"],
+          instructionalApproach: ["Teacher-Supported"]
+        }
       },
       {
-        id: 2,
-        title: "I CAN Learn®",
+        id: 36834237,
+        title: "Adaptive Arithmetic Practice with Program-Guided Task Selection",
+        study: "Schoppek, W. (2012). Dynamic task selection in learning arithmetic: The role of learner control and adaptation based on a hierarchy of skills. Zeitschrift für Pädagogische Psychologie, 26(1), 43–55.",
+        studyLink: "https://doi.org/10.1024/1010-0652/a000059",
+        description: "Computer-based software that automatically adapts arithmetic practice to students' skill levels, selecting problems based on a structured hierarchy to keep tasks challenging but manageable.",
+        whatItDoes: "Students practiced arithmetic and word problems using computer-based software that adapts practice tasks to students' skill levels. In the program-controlled version, the software automatically selected problems based on a structured hierarchy of arithmetic skills, aiming to keep tasks challenging but manageable. This approach was designed to prevent students from repeatedly practicing problems that were too easy.",
+        howItWasUsed: "Students used the software during regular math instruction over an eight-week period. Practice sessions occurred weekly and lasted one class period. The software provided immediate feedback and guided students through sets of arithmetic and word problems.",
+        whoItWasTestedWith: "The study included 278 third-grade students (ages 8–9) from 13 elementary school classes in Germany, representing both urban and rural schools. Students were assigned to program-controlled software practice, shared-control software practice (where students chose tasks from a menu), or traditional instruction.",
+        whatWasMeasured: "Student performance was measured using researcher-developed tests of arithmetic and word problem solving. The assessments focused on computation accuracy and multi-step problem solving and were administered before instruction, immediately after instruction, and again at follow-up.",
+        howWellItWorked: "Students using the adaptive, program-controlled software showed greater improvement in arithmetic performance than students receiving traditional instruction or using software that allowed students to choose their own problems. The improvement associated with program-controlled task selection was moderate in size, with an estimated effect size of 0.43 and a 95% confidence interval from 0.15 to 0.70.",
+        effectSize: "+0.43 SD",
+        effectLabel: "Large Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Computer/Software"],
+          instructionalApproach: ["Adaptive/Personalized"]
+        }
+      },
+      {
+        id: 36836013,
+        title: "Combining Computer Simulations with Hands-On Science Activities",
+        study: "Jaakkola, T., & Nurmi, S. (2008). Fostering elementary school students' understanding of simple electricity by combining simulation and laboratory activities. Journal of Computer Assisted Learning, 24, 271–283.",
+        studyLink: "https://doi.org/10.1111/j.1365-2729.2007.00259.x",
+        description: "Students learn about electricity using both interactive computer simulations and real laboratory materials, first completing tasks on simulation then repeating with physical equipment.",
+        whatItDoes: "Students learn about basic electricity by using both interactive computer simulations and real laboratory materials. The simulation helps students visualize invisible processes—such as how electric current flows—while the hands-on activities allow them to test those ideas with real batteries, bulbs, and wires. The goal is to help students move beyond common misconceptions and build a deeper, more accurate understanding of electric circuits.",
+        howItWasUsed: "Students worked through a structured set of electricity activities over a short instructional unit. In the combined approach, students first completed each task using a computer simulation and then repeated the same task with real laboratory equipment. Worksheets guided students step by step, prompting them to build circuits, make predictions, observe outcomes, and explain what they learned.",
+        whoItWasTestedWith: "The study involved 66 fourth- and fifth-grade students from one elementary school in Finland. Students had no prior formal instruction in electricity before participating.",
+        whatWasMeasured: "Student learning was measured using tests that assessed understanding of electric circuits, including concepts such as closed circuits, series and parallel configurations, voltage, and bulb brightness. The assessments focused on whether students developed scientifically accurate explanations rather than relying on intuitive but incorrect ideas.",
+        howWellItWorked: "Students who used both simulations and hands-on lab activities showed substantially stronger learning gains than students who used only simulations or only lab equipment. The improvement associated with the combined approach was moderate to large, with an estimated effect size of 0.43 and a 95% confidence interval from 0.08 to 0.77. Students in the combined approach were also much more likely to develop scientifically accurate explanations of how electric circuits work.",
+        effectSize: "+0.43 SD",
+        effectLabel: "Large Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Science"],
+          deliveryMode: ["Blended"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      },
+      {
+        id: 36836006,
+        title: "One Billion Math App (Adaptive Mobile Math Practice)",
+        study: "Pitchford, N. J. (2015). Development of early mathematical skills with a tablet intervention: A randomized control trial in Malawi. Frontiers in Psychology, 6, 485.",
+        studyLink: "https://doi.org/10.3389/fpsyg.2015.00485",
+        description: "Tablet-based mathematics program with short, interactive games that adapt to student performance, building foundational numeracy skills through immediate feedback.",
+        whatItDoes: "The One Billion Math app is a tablet-based mathematics program designed to build foundational numeracy skills through short, interactive games. The app adapts to each student's performance, automatically adjusting difficulty and providing immediate feedback. Activities focus on core early math skills such as number recognition, counting, basic operations, and problem solving.",
+        howItWasUsed: "Students used the One Billion Math app independently on tablets during regular school time. Sessions were short and frequent, allowing students to progress at their own pace. The app required minimal teacher instruction, making it feasible in classrooms with limited instructional resources.",
+        whoItWasTestedWith: "The study included 318 students in the first year of primary school in Malawi. Many students had limited prior exposure to formal mathematics instruction and little or no prior experience with digital learning tools.",
+        whatWasMeasured: "Student learning was measured using standardized assessments of early mathematics skills, including number knowledge, counting, and basic arithmetic. Assessments were administered before and after the intervention period.",
+        howWellItWorked: "Students who used the One Billion Math app showed meaningful improvements in early math achievement compared to students receiving regular classroom instruction. The size of the improvement was moderate, with an estimated effect size of 0.42 and a 95% confidence interval from 0.24 to 0.61.",
+        effectSize: "+0.42 SD",
+        effectLabel: "Large Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Game-Based"],
+          instructionalApproach: ["Adaptive/Personalized", "Self-Directed"]
+        }
+      },
+      {
+        id: 36438171,
+        title: "Intelligent Tutoring System for Middle School Mathematics",
+        study: "Koedinger, K. R., Anderson, J. R., Hadley, W. H., & Mark, M. A. (1997). Intelligent tutoring goes to school in the big city. International Journal of Artificial Intelligence in Education, 8, 30–43.",
+        studyLink: "https://www.semanticscholar.org/paper/36438171",
+        description: "Step-by-step algebra tutoring system that provides immediate feedback, adapts to student responses, and mirrors one-on-one tutoring by prompting through problem-solving steps.",
+        whatItDoes: "The program is an intelligent tutoring system designed to support students as they learn algebra. It provides step-by-step guidance while students solve problems, gives immediate feedback when errors occur, and adapts instruction based on each student's responses. The system is designed to mirror one-on-one tutoring by prompting students through problem-solving steps rather than simply giving answers.",
+        howItWasUsed: "Students used the tutoring software during regular math class time as part of their algebra instruction. The software guided students through practice problems, monitored their progress in real time, and adjusted instruction to address individual misunderstandings. Teachers integrated the system into existing classroom routines rather than replacing instruction entirely.",
+        whoItWasTestedWith: "The study included middle school students enrolled in algebra courses in an urban school district in the United States. The sample included students from multiple classrooms serving diverse student populations.",
+        whatWasMeasured: "Student learning was measured using assessments of algebra problem-solving and procedural knowledge aligned with the instructional content covered during the intervention.",
+        howWellItWorked: "Students who used the intelligent tutoring system demonstrated higher mathematics achievement than students receiving traditional instruction alone. The size of the improvement was moderate, with an estimated effect size of 0.41 and a 95% confidence interval from 0.30 to 0.53.",
+        effectSize: "+0.41 SD",
+        effectLabel: "Large Effect",
+        tags: {
+          gradeLevel: ["Middle School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Computer/Software"],
+          instructionalApproach: ["Adaptive/Personalized"]
+        }
+      },
+      {
+        id: 36834226,
+        title: "Online Laboratory Simulations and Serious Educational Games for Science",
+        study: "Lamb, R. L. (2016). Examination of the effects of dimensionality on cognitive processing in science: A computational modeling experiment comparing online laboratory simulations and serious educational games. Journal of Science Education and Technology, 25, 1–15.",
+        studyLink: "https://doi.org/10.1007/s10956-015-9580-2",
+        description: "Two-dimensional online lab simulations and three-dimensional serious educational games for high school science, allowing students to interact with biological processes in digital environments.",
+        whatItDoes: "This study compares two technology-based instructional approaches—two-dimensional online laboratory simulations and three-dimensional serious educational games—with traditional lecture-based instruction. Both technology conditions aim to improve students' science content understanding by allowing them to interact with representations of biological processes, while the three-dimensional games additionally immerse students in spatially rich, problem-based environments.",
+        howItWasUsed: "The study used a block-randomized pretest–posttest design across intact high school classes. Students participated in one of three conditions over an 8-week instructional period: a two-dimensional online lab simulation, a three-dimensional serious educational game, or traditional lecture-based instruction. Teachers' roles were minimized in the technology conditions, with instruction largely embedded within the digital environments.",
+        whoItWasTestedWith: "Participants were 11th- and 12th-grade high school students (N = 551) from U.S. secondary schools. Stratified random sampling was used to create balanced groups across instructional conditions.",
+        whatWasMeasured: "Primary outcomes included science content achievement, measured using a criterion-referenced test drawn from released state science exam items focused on biotechnology concepts (e.g., DNA base-pair identification and polymerase chain reaction).",
+        howWellItWorked: "Technology-based instruction produced moderate, statistically significant improvements in science achievement compared with traditional instruction. The estimated effect size was g ≈ 0.40, with a 95% confidence interval of [0.17, 0.63], indicating a reliable positive effect. Results favored both online simulations and serious educational games, with the strongest gains observed for three-dimensional game-based instruction.",
+        effectSize: "+0.40 SD",
+        effectLabel: "Large Effect",
+        tags: {
+          gradeLevel: ["High School"],
+          subject: ["Science"],
+          deliveryMode: ["Game-Based", "Computer/Software"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      },
+      {
+        id: 36440669,
+        title: "Computer-Aided Instruction for Pre-Algebra and Algebra (I Can Learn®)",
         study: "Barrow, L., Markman, L., & Rouse, C. E. (2009). Technology's edge: The educational benefits of computer-aided instruction. American Economic Journal: Economic Policy, 1(1), 52–74.",
         studyLink: "https://doi.org/10.1257/pol.1.1.52",
-        description: "A computer-based mathematics curriculum designed to support student learning in Algebra and Pre-Algebra through interactive lessons aligned with NCTM standards.",
-        fullDescription: "I CAN Learn® (ICL) is a computer-based mathematics curriculum designed to support student learning in Algebra and Pre-Algebra through interactive lessons aligned with NCTM standards. The program includes over 600 lessons presented in a sequenced, mastery-based format that combines video-based instruction, guided practice, and immediate feedback. Students proceed at their own pace, and the system automatically adjusts to their performance, allowing for differentiated instruction.",
-        implementation: "The intervention was implemented as part of regular school instruction in middle and high schools. Students used the computer-based curriculum in dedicated computer labs for one full class period per day, typically replacing their traditional math class. The implementation spanned an entire academic year, during which students progressed through sequenced lessons covering Pre-Algebra and Algebra I content.",
-        sample: "1,588 middle and high school students across three urban school districts in the U.S.",
-        outcome: "NWEA Algebra Achievement Test",
-        effectSize: "+0.36 SD"
+        description: "Self-paced computer program guiding students through pre-algebra and algebra with explanations, worked examples, practice opportunities, and immediate feedback.",
+        whatItDoes: "I Can Learn® is a computer-based mathematics program designed to support students in pre-algebra and algebra through structured, self-paced instruction. The software guides students step by step through math problems, providing explanations, worked examples, practice opportunities, and immediate feedback. The focus is on building strong procedural fluency in algebra while ensuring students receive consistent instruction aligned to course content.",
+        howItWasUsed: "Students used I Can Learn® during regular school hours in computer lab settings. The program replaced part of traditional classroom instruction rather than serving only as a supplement. Students worked with the software multiple times per week—often across an academic year—during scheduled math periods, with teachers and lab aides present to supervise, monitor progress, and provide support when needed.",
+        whoItWasTestedWith: "The study included middle school and high school students enrolled in pre-algebra and algebra courses in large urban school districts in the United States. Schools primarily served low-income student populations, and students entered the study with a wide range of prior math achievement levels.",
+        whatWasMeasured: "Student learning was measured using mathematics achievement outcomes, including algebra-focused standardized assessments, district benchmark exams, and course-aligned achievement tests.",
+        howWellItWorked: "Students who received instruction using I Can Learn® showed meaningful improvements in mathematics achievement compared to students receiving traditional instruction alone. The improvement was moderate in size, with an estimated effect size of 0.36 and a 95% confidence interval from 0.21 to 0.51, indicating that the gains were statistically reliable and unlikely to be due to chance.",
+        effectSize: "+0.36 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["Middle School", "High School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Computer/Software"],
+          instructionalApproach: ["Self-Directed"]
+        }
       },
       {
-        id: 3,
-        title: "Assessment and Learning in Knowledge Spaces (ALEKS)",
-        study: "Wilder, S., & Berry, L. (2016). Emporium model: The key to content retention in secondary math courses. Journal of Educators Online, 13(2), 53–75.",
-        studyLink: "https://doi.org/10.9743/JEO.2016.2.5",
-        description: "An adaptive online learning system that creates individualized learning paths based on diagnostic placement tests with immediate feedback and periodic reassessments.",
-        fullDescription: "ALEKS, an adaptive online learning system that created individualized learning paths based on a diagnostic placement test. Students progressed through math content at their own pace, receiving immediate feedback and periodic reassessments to ensure mastery. Teachers did not provide whole-class instruction but offered targeted, one-on-one support when students requested help. The structure emphasized mastery learning, frequent checks for understanding, and clear performance benchmarks, allowing students to advance only after demonstrating proficiency.",
-        implementation: "Students used the web-based ALEKS platform during scheduled class periods over a semester, with learning time dedicated to working independently in the system.",
-        sample: "62 high school students enrolled in an Algebra I course at a rural high school.",
-        outcome: "Teacher-created assessments aligned with the Algebra I curriculum.",
-        effectSize: "+0.45 SD"
+        id: 36440603,
+        title: "In-Home Online Computer-Assisted Learning for Remedial Mathematics",
+        study: "Tang, B., Ting, T.-T., Wu, C.-I., Ma, Y., Mo, D., Hung, W.-T., & Rozelle, S. (2020). The impact of online computer assisted learning at home for disadvantaged children in Taiwan: Evidence from a randomized experiment. Sustainability, 12, 10092.",
+        studyLink: "https://doi.org/10.3390/su122310092",
+        description: "Online, game-based computer-assisted learning for mathematics that students complete at home, offering structured remedial practice aligned with school curriculum.",
+        whatItDoes: "This intervention provides online, game-based computer-assisted learning for mathematics that students complete at home, outside of regular school hours. The program is designed to offer structured, remedial practice aligned with the school curriculum, targeting foundational math skills for disadvantaged students who lack access to tutoring or other learning supports.",
+        howItWasUsed: "Students assigned to the treatment group were asked to complete weekly 60-minute online CAL sessions at home over one or two semesters. The software delivered standardized math exercises and immediate feedback, while teachers' involvement was limited to technical support and reminders, with no direct instructional assistance during sessions.",
+        whoItWasTestedWith: "The study included fourth- and fifth-grade students from 84 rural schools in Taiwan, serving predominantly Yuanzhumin (Indigenous) students. Schools were randomly assigned to treatment or control conditions, and analyses focused on students with home internet access.",
+        whatWasMeasured: "Primary outcomes included mathematics achievement, measured using standardized math tests administered at baseline, midline, and endline.",
+        howWellItWorked: "Students offered in-home CAL demonstrated moderate, statistically significant improvements in math achievement relative to control students. The pooled effect size was g ≈ 0.36, with a 95% confidence interval of [0.21, 0.51], indicating a reliable positive impact. Effects were larger among students who consistently engaged with the program, though the estimate summarized here reflects overall program impacts.",
+        effectSize: "+0.36 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Game-Based"],
+          instructionalApproach: ["Self-Directed"]
+        }
       },
       {
-        id: 4,
-        title: "Teacher-Facilitated Mathematics Software",
-        study: "Afzal, M. T., & Gondal, M. B. (2010). Effect of Mathematics Software Facilitated Teaching on Students Learning. The International Journal of Technology, Knowledge and Society, 6(3), 111-120.",
+        id: 36438334,
+        title: "Computer-Assisted Instruction for Learning Multiplication",
+        study: "Chang, K.-E., Sung, Y.-T., Chen, Y.-L., & Huang, L.-H. (2008). Learning multiplication through computer-assisted learning activities. Computers in Human Behavior, 24, 2904–2916.",
+        studyLink: "https://doi.org/10.1016/j.chb.2008.04.014",
+        description: "Visual, game-like activities combining conceptual understanding of multiplication with procedural practice, using grouping, comparison, and arrays before emphasizing fact fluency.",
+        whatItDoes: "This computer-assisted learning (CAL) program is designed to help young students learn multiplication by combining conceptual understanding (what multiplication means) with procedural practice (how to compute multiplication facts). Rather than focusing only on memorization, the program uses visual, game-like activities to help students understand multiplication as grouping, comparison, and arrays before emphasizing speed and accuracy with facts.",
+        howItWasUsed: "Students participated in a structured sequence of eight computer-based activities organized into three stages: (1) understanding basic multiplication concepts, (2) learning the meaning and properties of multiplication (such as commutativity), and (3) practicing multiplication facts. All students received the same classroom instruction, after which the intervention group used the computer activities while the comparison group worked with traditional written materials. The intervention took place over approximately three weeks, with repeated, guided practice during regular instructional time.",
+        whoItWasTestedWith: "The study included second-grade students (approximately 8 years old) from an elementary school in Taipei, Taiwan. Students had little to no prior formal instruction in multiplication, and the sample included learners with a wide range of initial math knowledge.",
+        whatWasMeasured: "Student learning was assessed using researcher-developed tests covering basic multiplication concepts (e.g., equal groups, arrays), understanding of the meaning and properties of multiplication, and multiplication-related computation skills. An overall multiplication achievement score was also examined.",
+        howWellItWorked: "Overall, students who used the computer-assisted learning activities demonstrated moderate improvements in multiplication learning compared to students using traditional materials. The estimated effect size was approximately 0.35, with a 95% confidence interval of [0.05, 0.65], indicating a statistically reliable positive effect. Gains were strongest for students with lower prior knowledge, particularly in understanding multiplication concepts and properties. The program was less effective for improving computation speed and accuracy over the short instructional period.",
+        effectSize: "+0.35 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Game-Based"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      },
+      {
+        id: 36438167,
+        title: "Tutorial and Edutainment Software for Teaching Cell Division",
+        study: "Kara, Y., & Yeşilyurt, S. (2008). Comparing the impacts of tutorial and edutainment software programs on students' achievements, misconceptions, and attitudes towards biology. Journal of Science Education and Technology, 17, 32–41.",
+        studyLink: "https://doi.org/10.1007/s10956-007-9087-7",
+        description: "Computer-assisted instructional software teaching cell division through either step-by-step tutorial presentations or game-like edutainment environments with narrative engagement.",
+        whatItDoes: "This approach uses computer-assisted instructional software to teach the biology topic of cell division (mitosis and meiosis). Two types of software were examined: Tutorial software, which presents information step by step using text, animations, diagrams, and feedback, and Edutainment software, which embeds biology content within a game-like, narrative environment designed to engage students emotionally and visually. Both approaches aim to improve students' conceptual understanding, reduce common misconceptions, and support learning beyond traditional lecture-based instruction.",
+        howItWasUsed: "Instruction took place during regular biology lessons over four class periods (45 minutes each). Students in the experimental groups worked individually in a computer lab using the instructional software, following teacher introductions but receiving minimal direct guidance during use. The tutorial group used a structured CD-ROM–based biology program, while the edutainment group used a role-playing science adventure game focused on solving biology-related problems. A control group received traditional lecture-based instruction.",
+        whoItWasTestedWith: "The study included 72 ninth-grade students (ages 14–15) from a public secondary school in Turkey. Students were randomly assigned to a tutorial software group, an edutainment software group, or a traditional instruction control group. All students were computer literate but had no prior experience using computer-assisted instruction for biology.",
+        whatWasMeasured: "Student outcomes included biology achievement related to cell division (researcher-developed achievement test), conceptual understanding and misconceptions about mitosis and meiosis (concept test), and attitudes toward biology (biology attitude scale).",
+        howWellItWorked: "Students who used instructional software demonstrated stronger biology achievement than students receiving traditional instruction. The overall improvement associated with computer-assisted instruction was moderate in size, with an estimated effect size of 0.35 and a 95% confidence interval from 0.05 to 0.65, indicating a statistically reliable positive effect. Both tutorial and edutainment software helped reduce misconceptions, while the edutainment software was particularly effective at improving students' attitudes toward biology.",
+        effectSize: "+0.35 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["High School"],
+          subject: ["Science"],
+          deliveryMode: ["Computer/Software", "Game-Based"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      },
+      {
+        id: 36438533,
+        title: "Live Interactive Satellite-Based Instruction for Rural Schools",
+        study: "Johnston, J., & Ksoll, C. (2022). Effectiveness of interactive satellite-transmitted instruction: Experimental evidence from Ghanaian primary schools. Economics of Education Review, 91, 102315.",
+        studyLink: "https://doi.org/10.1016/j.econedurev.2022.102315",
+        description: "Real-time, two-way video instruction from expert teachers delivered via satellite to multiple rural classrooms, focusing on foundational literacy and numeracy.",
+        whatItDoes: "This program delivers real-time, two-way video instruction from expert teachers in a central studio to multiple rural classrooms simultaneously using satellite technology. Classroom facilitators support students locally while instruction focuses on basic literacy and numeracy skills aligned with students' learning levels.",
+        howItWasUsed: "The intervention was implemented as a cluster randomized controlled trial in rural Ghanaian primary schools. Students received approximately two hours per day of live satellite instruction, integrated into the regular school schedule, with instruction adjusted over time to better match student ability levels.",
+        whoItWasTestedWith: "The study included primary school students in grades 2–5 from low-income, rural communities with limited access to trained teachers. Analyses focused on students exposed to the program for one or two full academic years.",
+        whatWasMeasured: "Student outcomes were assessed using standardized early-grade measures of numeracy (e.g., number recognition, basic operations) and literacy (e.g., letter recognition, phonics, reading fluency).",
+        howWellItWorked: "Students receiving satellite-based instruction demonstrated moderate, statistically significant learning gains compared with control students. The pooled effect size was g ≈ 0.34, with a 95% confidence interval of [0.25, 0.42], indicating a reliable positive impact on foundational academic skills.",
+        effectSize: "+0.34 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Live Instruction"],
+          instructionalApproach: ["Teacher-Supported"]
+        }
+      },
+      {
+        id: 36439801,
+        title: "Virtual Versus Physical Inquiry-Based Chemistry Labs",
+        study: "Pyatt, K., & Sims, R. (2012). Virtual and physical experimentation in inquiry-based science labs: Attitudes, performance and access. Journal of Science Education and Technology, 21, 133–147.",
+        studyLink: "https://doi.org/10.1007/s10956-011-9291-6",
+        description: "Computer-simulated chemistry labs compared with traditional hands-on physical labs, both using inquiry-based instructional frameworks for stoichiometry investigations.",
+        whatItDoes: "This approach compares computer-simulated (virtual) chemistry labs with traditional hands-on physical labs within an inquiry-based instructional framework. Virtual labs allow students to conduct experiments, manipulate variables, and analyze data using simulations that mirror real laboratory procedures, with the goal of supporting conceptual understanding and increasing access to laboratory experiences.",
+        howItWasUsed: "The study employed an experimental crossover design in first-year high school chemistry classes. Students completed two stoichiometry laboratory investigations, experiencing both virtual and physical lab formats across trials. Instructional content, procedures, and assessments were held constant, with the instructional medium (virtual vs. physical) as the key difference.",
+        whoItWasTestedWith: "Participants were 184 first-year secondary chemistry students from a suburban U.S. public high school. All students experienced both virtual and physical lab conditions over the two-year study period.",
+        whatWasMeasured: "Outcomes included student performance on post-lab assessments measuring data interpretation, hypothesis formulation, and conceptual understanding, and student attitudes toward lab usefulness, equipment usability, and open-endedness (measured via a researcher-developed questionnaire).",
+        howWellItWorked: "Across outcomes, virtual and physical labs produced small-to-moderate positive effects on student learning. The pooled effect size was g ≈ 0.30, with a 95% confidence interval of [0.01, 0.59], indicating a modest but statistically reliable advantage associated with virtual inquiry-based laboratory experiences.",
+        effectSize: "+0.30 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["High School"],
+          subject: ["Science"],
+          deliveryMode: ["Blended"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      },
+      {
+        id: 36438159,
+        title: "Student–Teacher–Scientist Partnership with Online Mentoring",
+        study: "Taylor, J. A., Adams, C. T., Westbrook, A. L., Creasap Gee, J., Spybrook, J. K., Kowalski, S. M., Gardner, A. L., & Bloom, M. (2022). The effect of a student–teacher–scientist partnership program on high school students' science achievement and attitudes about scientists. Journal of Research in Science Teaching, 59(3), 423–457.",
+        studyLink: "https://doi.org/10.1002/tea.21730",
+        description: "Project-based biology instruction integrated with asynchronous online mentoring from professional scientists, focusing on photosynthesis and respiration investigations.",
+        whatItDoes: "This program integrates project-based biology instruction with asynchronous online mentoring from professional scientists, aiming to deepen students' understanding of photosynthesis and respiration while increasing engagement with authentic scientific practices.",
+        howItWasUsed: "Teachers implemented the PlantingScience Power of Sunlight module during regular instruction. Students worked in small teams to conduct guided and student-designed investigations and communicated online with scientist mentors who provided feedback on research questions, methods, and interpretations.",
+        whoItWasTestedWith: "The study involved U.S. high school biology students taught by teachers who were randomly assigned to either the partnership program or business-as-usual instruction. The sample was demographically similar to the national population of high schools.",
+        whatWasMeasured: "Primary outcomes included science achievement focused on photosynthesis and cellular respiration.",
+        howWellItWorked: "Students in the partnership program showed small but statistically significant gains in science achievement compared to business-as-usual instruction. The estimated effect size was g ≈ 0.21, with a 95% confidence interval of [0.03, 0.39], indicating a positive and reliable effect.",
+        effectSize: "+0.21 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["High School"],
+          subject: ["Science"],
+          deliveryMode: ["Blended"],
+          instructionalApproach: ["Teacher-Supported"]
+        }
+      },
+      {
+        id: 36439562,
+        title: "Computer-Assisted Learning for Remedial Math with Long-Term Follow-Up",
+        study: "Mo, D., Zhang, L., Wang, J., Huang, W., Shi, Y., Boswell, M., & Rozelle, S. (2015). Persistence of learning gains from computer assisted learning: Experimental evidence from China. Journal of Computer Assisted Learning.",
+        studyLink: "https://doi.org/10.1111/jcal.12125",
+        description: "Game-based computer-assisted learning software providing structured remedial mathematics practice with emphasis on sustaining learning gains over time.",
+        whatItDoes: "This intervention uses game-based computer-assisted learning software to provide structured, remedial mathematics practice aligned with the national curriculum. The software delivers animated lessons, guided practice, and immediate feedback, aiming to strengthen foundational math skills and sustain learning over time rather than producing only short-term gains.",
+        howItWasUsed: "The CAL program was implemented as a school-level randomized controlled trial in rural China. Boarding students participated in two 40-minute CAL sessions per week, held outside regular class time, over three consecutive semesters (1.5 years). Teacher involvement was limited to supervision and technical support, with no direct math instruction during CAL sessions.",
+        whoItWasTestedWith: "The study included 2,741 third- and fifth-grade boarding students from 72 rural elementary schools in Shaanxi Province, China. Schools were randomly assigned to treatment or control conditions, and analyses focused on academically vulnerable rural students.",
+        whatWasMeasured: "Primary outcomes included mathematics achievement, measured using standardized math tests administered at baseline and follow-up waves over the 1.5-year period.",
+        howWellItWorked: "Students offered CAL showed small but statistically reliable improvements in math achievement relative to control students. The pooled effect size was g ≈ 0.21, with a 95% confidence interval of [0.03, 0.39], indicating a positive and persistent effect. Results suggest that learning gains from CAL were sustained over time rather than fading after initial exposure.",
+        effectSize: "+0.21 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["Elementary School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Game-Based"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      },
+      {
+        id: 36439629,
+        title: "Online Algebra I Course for Middle School Students",
+        study: "Heppen, J. B., Allensworth, E., Walters, K., Rickles, J., Taylor, S. S., & Sorensen, N. (2012). Access to Algebra I: The effects of online mathematics for grade 8 students. National Center for Education Evaluation and Regional Assistance (NCEE).",
+        studyLink: "https://ies.ed.gov/ncee/pubs/20134005/",
+        description: "Online Algebra I course for algebra-ready eighth-graders attending schools without in-person Algebra I, supported by on-site facilitators.",
+        whatItDoes: "This intervention provides an online Algebra I course to eighth-grade students who are academically ready for algebra but attend middle schools that do not typically offer Algebra I. The goal is to broaden access to advanced mathematics coursework using online delivery rather than traditional in-person instruction.",
+        howItWasUsed: "The study used a cluster randomized controlled trial, with schools randomly assigned to offer the online Algebra I course or continue with business-as-usual mathematics instruction. Students in treatment schools took Algebra I online during the regular school day, supported by on-site facilitators, while control students remained in their standard math courses.",
+        whoItWasTestedWith: "Participants were algebra-ready eighth-grade students from U.S. middle schools that lacked in-person Algebra I offerings. The analytic sample included students from 68 schools across multiple districts.",
+        whatWasMeasured: "Primary outcomes included algebra achievement, measured using a standardized Algebra I posttest. Secondary outcomes included general mathematics achievement and subsequent high school coursetaking.",
+        howWellItWorked: "Students offered online Algebra I showed small but statistically significant gains in mathematics achievement compared with students in business-as-usual instruction. The pooled effect size was g ≈ 0.18, with a 95% confidence interval of [0.03, 0.33], indicating a modest positive impact. The authors note that effects reflect increased access to Algebra I and cannot be fully separated from the online mode of instruction.",
+        effectSize: "+0.18 SD",
+        effectLabel: "Moderate Effect",
+        tags: {
+          gradeLevel: ["Middle School"],
+          subject: ["Mathematics"],
+          deliveryMode: ["Computer/Software"],
+          instructionalApproach: ["Self-Directed"]
+        }
+      }
+    ];
+      {
+        id: 36833706,
+        title: "Teacher-Facilitated Math Software for Grade 6",
+        study: "Afzal, M. T., & Gondal, M. B. (2010). Effect of mathematics software facilitated teaching on students learning. The International Journal of Technology, Knowledge and Society, 6(3).",
         studyLink: "https://doi.org/10.18848/1832-3669/CGP/v06i03/56125",
-        description: "Interactive mathematics software covering Integers, Algebra, and Geometry with teacher facilitation, where teachers help students grasp concepts, answer questions, and provide explanations.",
-        fullDescription: "Interactive software was developed using three chapters of sixth grade mathematics textbook (Integers, Algebra, and Geometry). In the teacher-facilitated approach, students learned in a computer lab with the software while the teacher actively helped them grasp concepts, answered questions, and gave explanations using chalk and board where necessary. Students were free to ask questions and seek help. A lab assistant was present to help with software use and hardware problems. This approach combined the benefits of technology with direct teacher support.",
-        implementation: "The intervention was implemented over three hours per week in a computer lab. Students worked with the mathematics software while receiving active teacher support. The teacher facilitated learning by helping students grasp concepts, answering questions, and providing explanations. A lab assistant was present to help with technical issues.",
-        sample: "104 sixth-grade students from four schools in Punjab Province, Pakistan (two urban, two rural; one male, one female school from each locality).",
-        outcome: "Researcher-developed achievement test covering the three instructional units (100 marks total: 60 marks MCQs, 28 marks short answers, 12 marks extended response questions).",
+        description: "Interactive math software combined with active teacher support, where teachers regularly explain concepts, answer questions, and reinforce learning while students work on computers.",
+        whatItDoes: "This program uses interactive math software alongside active teacher support. Students learn math concepts on the computer, while the teacher regularly steps in to explain ideas, answer questions, and reinforce learning using familiar classroom tools. A lab assistant helps with technical issues so students can stay focused on learning.",
+        howItWasUsed: "Students worked on software-based lessons covering integers, algebra, and geometry. Instruction took place three times per week in a computer lab. Teachers stayed actively involved throughout each session rather than letting students work entirely on their own.",
+        whoItWasTestedWith: "The study included 312 sixth-grade students from four public schools in Punjab Province, Pakistan. Schools represented both urban and rural settings and included boys' and girls' schools.",
+        whatWasMeasured: "Student learning was measured using a math test created by the researchers. The test assessed students' ability to remember, understand, and apply math concepts and included multiple-choice, short-answer, and longer problem-solving questions.",
+        howWellItWorked: "Students who received teacher-facilitated math software instruction performed better on math achievement than students taught with traditional instruction or self-paced computer instruction. The size of the improvement was moderate, with an estimated effect size of 0.50, and a 95% confidence interval from 0.22 to 0.77.",
         effectSize: "+0.50 SD"
       },
       {
-        id: 5,
-        title: "Merlin's Math Mill (Program-Controlled Adaptive Selection)",
-        study: "Schoppek, W. (2012). Dynamic Task Selection in Learning Arithmetic: The Role of Learner Control and Adaptation Based on a Hierarchy of Skills. Zeitschrift für Pädagogische Psychologie, 26(1), 43-55.",
+        id: 36834237,
+        title: "Adaptive Arithmetic Practice with Program-Guided Task Selection",
+        study: "Schoppek, W. (2012). Dynamic task selection in learning arithmetic: The role of learner control and adaptation based on a hierarchy of skills. Zeitschrift für Pädagogische Psychologie, 26(1), 43–55.",
         studyLink: "https://doi.org/10.1024/1010-0652/a000059",
-        description: "Computer-assisted practice software that uses an adaptive algorithm to select arithmetic and word problems based on a hierarchy of skills, automatically adjusting problem difficulty to maintain moderate cognitive load.",
-        fullDescription: "Merlin's Math Mill is adaptive training software that selects practice problems based on a hypothetical hierarchy of skills in arithmetic (HiSkA). The program-controlled version automatically selected problems with predicted success rates between 0.80 and 0.95, corresponding to skills in the associative phase of development where practice is most effective. The software contains about 5,500 problems covering computation problems (equations), word problems (various types including multi-step problems), and number space problems. The adaptive algorithm calculated individual solution probabilities for each problem class and selected problems to regulate cognitive load to moderate levels, ensuring skills were neither too easy (autonomous phase) nor too difficult (cognitive phase requiring close supervision).",
-        implementation: "Students practiced with the software for seven 45-minute sessions over eight weeks (including one vacation week) in school computer labs. Half of each class worked with the software while the other half stayed with the teacher, then switched. The software provided immediate corrective feedback, allowing two attempts per problem. Students could unlock short video clips or jokes as rewards after successfully completing more than half the problems in a set.",
-        sample: "95 third-grade students (mean age 8;8 years) from nine classes across seven elementary schools in the Bayreuth region, Germany (two rural, five urban schools).",
-        outcome: "Researcher-developed arithmetic test with two parts: (1) 40 equation problems (10-minute limit), and (2) 22 word problems requiring calculations and written answers with numbers and units (20-minute limit). Scoring awarded points for correct calculations, correct numbers, and correct units.",
+        description: "Computer-based software that automatically adapts arithmetic practice to students' skill levels, selecting problems based on a structured hierarchy to keep tasks challenging but manageable.",
+        whatItDoes: "Students practiced arithmetic and word problems using computer-based software that adapts practice tasks to students' skill levels. In the program-controlled version, the software automatically selected problems based on a structured hierarchy of arithmetic skills, aiming to keep tasks challenging but manageable. This approach was designed to prevent students from repeatedly practicing problems that were too easy.",
+        howItWasUsed: "Students used the software during regular math instruction over an eight-week period. Practice sessions occurred weekly and lasted one class period. The software provided immediate feedback and guided students through sets of arithmetic and word problems.",
+        whoItWasTestedWith: "The study included 278 third-grade students (ages 8–9) from 13 elementary school classes in Germany, representing both urban and rural schools. Students were assigned to program-controlled software practice, shared-control software practice (where students chose tasks from a menu), or traditional instruction.",
+        whatWasMeasured: "Student performance was measured using researcher-developed tests of arithmetic and word problem solving. The assessments focused on computation accuracy and multi-step problem solving and were administered before instruction, immediately after instruction, and again at follow-up.",
+        howWellItWorked: "Students using the adaptive, program-controlled software showed greater improvement in arithmetic performance than students receiving traditional instruction or using software that allowed students to choose their own problems. The improvement associated with program-controlled task selection was moderate in size, with an estimated effect size of 0.43 and a 95% confidence interval from 0.15 to 0.70.",
         effectSize: "+0.43 SD"
       },
       {
-        id: 6,
-        title: "Simulation-Laboratory Combination for Learning Electricity",
-        study: "Jaakkola, T., & Nurmi, S. (2008). Fostering elementary school students' understanding of simple electricity by combining simulation and laboratory activities. Journal of Computer Assisted Learning, 24(4), 271-283.",
+        id: 36836013,
+        title: "Combining Computer Simulations with Hands-On Science Activities",
+        study: "Jaakkola, T., & Nurmi, S. (2008). Fostering elementary school students' understanding of simple electricity by combining simulation and laboratory activities. Journal of Computer Assisted Learning, 24, 271–283.",
         studyLink: "https://doi.org/10.1111/j.1365-2729.2007.00259.x",
-        description: "A combined approach where students first used an interactive computer simulation (Electricity Exploration Tool) to learn concepts of simple electricity, then immediately practiced the same concepts with physical laboratory equipment.",
-        fullDescription: "Students in the combination environment used both the Electricity Exploration Tool simulation and physical laboratory equipment kits (batteries, bulbs, wires, switches, multimeter). Students were first asked to complete circuit assignments using the semi-realistic simulation that visualized current flow and allowed easy manipulation of circuit components. After successfully completing each assignment in the simulation, they immediately repeated the same assignment with real laboratory equipment located next to the computer. This approach was designed to help students first discover theoretical principles through the idealized simulation environment, then transfer and verify that these laws apply in real-world circuits, promoting conceptual change by bridging theory and reality.",
-        implementation: "The intervention consisted of two consecutive hours during one session. After a 15-minute general introduction to electricity (identical across all conditions), student pairs worked through 12 worksheets with progressively challenging circuit assignments. In the combination condition, each worksheet was completed first with the simulation, then verified with physical equipment. Worksheets contained instructional questions encouraging attention to circuit configurations and their effects on bulb brightness and voltages. Teachers controlled progression, checking answers before students could advance to the next worksheet.",
-        sample: "22 fourth and fifth grade students (10-11 years old) from one urban Finnish elementary school with no prior formal education on electricity. Students were matched into conditions based on pre-test scores to ensure equal baseline performance across groups.",
-        outcome: "Researcher-developed subject knowledge test with two parts: (1) 40 equation-style computation problems (10 minutes), and (2) 22 word problems requiring calculations and written answers with numbers and units (20 minutes). Scoring awarded points for correct calculations, numbers, and units. Post-test included basic questions (repeated from pre-test) and four additional advanced questions with more complex circuits.",
+        description: "Students learn about electricity using both interactive computer simulations and real laboratory materials, first completing tasks on simulation then repeating with physical equipment.",
+        whatItDoes: "Students learn about basic electricity by using both interactive computer simulations and real laboratory materials. The simulation helps students visualize invisible processes—such as how electric current flows—while the hands-on activities allow them to test those ideas with real batteries, bulbs, and wires. The goal is to help students move beyond common misconceptions and build a deeper, more accurate understanding of electric circuits.",
+        howItWasUsed: "Students worked through a structured set of electricity activities over a short instructional unit. In the combined approach, students first completed each task using a computer simulation and then repeated the same task with real laboratory equipment. Worksheets guided students step by step, prompting them to build circuits, make predictions, observe outcomes, and explain what they learned.",
+        whoItWasTestedWith: "The study involved 66 fourth- and fifth-grade students from one elementary school in Finland. Students had no prior formal instruction in electricity before participating.",
+        whatWasMeasured: "Student learning was measured using tests that assessed understanding of electric circuits, including concepts such as closed circuits, series and parallel configurations, voltage, and bulb brightness. The assessments focused on whether students developed scientifically accurate explanations rather than relying on intuitive but incorrect ideas.",
+        howWellItWorked: "Students who used both simulations and hands-on lab activities showed substantially stronger learning gains than students who used only simulations or only lab equipment. The improvement associated with the combined approach was moderate to large, with an estimated effect size of 0.43 and a 95% confidence interval from 0.08 to 0.77. Students in the combined approach were also much more likely to develop scientifically accurate explanations of how electric circuits work.",
         effectSize: "+0.43 SD"
       },
       {
-        id: 7,
-        title: "onebillion Interactive Mathematics Apps (Malawi)",
-        study: "Pitchford, N. J. (2015). Development of early mathematical skills with a tablet intervention: a randomized control trial in Malawi. Frontiers in Psychology, 6, Article 485.",
+        id: 36836006,
+        title: "One Billion Math App (Adaptive Mobile Math Practice)",
+        study: "Pitchford, N. J. (2015). Development of early mathematical skills with a tablet intervention: A randomized control trial in Malawi. Frontiers in Psychology, 6, 485.",
         studyLink: "https://doi.org/10.3389/fpsyg.2015.00485",
-        description: "Tablet-based mathematics apps designed for low-resource settings, using games and activities aligned with national curriculum to teach number concepts and counting.",
-        fullDescription: "The onebillion suite provided self-directed learning through interactive games and activities aligned with the Malawi national curriculum. The apps included numeracy content from the first three grades, covering counting, number recognition, addition, subtraction, and early multiplication. Each app used culturally familiar visuals, audio narration in local languages (Chichewa), immediate feedback, and adaptive progression. Students worked independently at their own pace using touch-screen tablets in classroom settings, with minimal teacher involvement. The platform was specifically designed for use in low-resource environments with intermittent electricity.",
-        implementation: "The intervention was delivered in two phases. In Phase 1 (May 2013), students used tablets for one full school day (approximately 4 hours). In Phase 2 (July-November 2013), students used the tablets for 30 minutes daily, four days per week over eight weeks, totaling about 16 hours of use. Students worked individually with tablets in their regular classroom settings with minimal teacher supervision.",
-        sample: "357 students from three primary schools in Lilongwe, Malawi. At baseline, mean age was 7.98 years (SD=1.83), with 49.6% female students. Students came from low socioeconomic backgrounds with limited prior educational resources.",
-        outcome: "Early Grade Mathematics Assessment (EGMA) – a standardized test measuring early mathematical abilities including number identification, number discrimination, missing number, addition, subtraction, and word problems. Post-testing occurred immediately after each intervention phase.",
-        effectSize: "+0.59 SD"
-      },
-      {
-        id: 8,
-        title: "Computer-Assisted Instruction (CAI) for Elementary Addition and Subtraction",
-        study: "Burns, M. K., Kanive, R., & DeGrande, M. (2012). Effect of a computer-delivered math fact intervention as a supplemental intervention for math in third and fourth grades. Remedial and Special Education, 33(3), 184–191.",
-        studyLink: "https://doi.org/10.1177/0741932510381652",
-        description: "A web-based program focusing on basic addition and subtraction facts through practice exercises with immediate feedback and progress monitoring.",
-        fullDescription: "The Math Fact Mastery (MFM) program was a web-based supplemental intervention designed to improve computational fluency in basic addition and subtraction. Students worked through sequenced exercises targeting specific fact families, receiving immediate feedback on their responses. The program tracked student progress through a placement test that determined starting levels and adapted practice based on performance. Sessions emphasized timed practice to build automaticity, with students advancing through increasingly complex fact combinations. The intervention was designed as a supplement to core mathematics instruction.",
-        implementation: "Students worked with the MFM program three to four times per week for 10 minutes per session over approximately 10 weeks (28 total sessions on average). Sessions took place during regular school hours in a computer lab or classroom with computers. A paraprofessional supervised the sessions, providing technical assistance but not mathematics instruction. Students completed a placement test at the start, then worked through practice sessions independently with the adaptive software.",
-        sample: "27 third and fourth grade students from one elementary school in the Midwest who scored below the 25th percentile on district math assessments and were receiving Tier 2 interventions. Students were predominantly White (96%) and from lower socioeconomic backgrounds (70% free/reduced lunch).",
-        outcome: "AIMSweb Math Computation (M-COMP) probe – a two-minute timed test of mixed addition and subtraction problems matched to grade level. Students were assessed on digits correct per minute.",
+        description: "Tablet-based mathematics program with short, interactive games that adapt to student performance, building foundational numeracy skills through immediate feedback.",
+        whatItDoes: "The One Billion Math app is a tablet-based mathematics program designed to build foundational numeracy skills through short, interactive games. The app adapts to each student's performance, automatically adjusting difficulty and providing immediate feedback. Activities focus on core early math skills such as number recognition, counting, basic operations, and problem solving.",
+        howItWasUsed: "Students used the One Billion Math app independently on tablets during regular school time. Sessions were short and frequent, allowing students to progress at their own pace. The app required minimal teacher instruction, making it feasible in classrooms with limited instructional resources.",
+        whoItWasTestedWith: "The study included 318 students in the first year of primary school in Malawi. Many students had limited prior exposure to formal mathematics instruction and little or no prior experience with digital learning tools.",
+        whatWasMeasured: "Student learning was measured using standardized assessments of early mathematics skills, including number knowledge, counting, and basic arithmetic. Assessments were administered before and after the intervention period.",
+        howWellItWorked: "Students who used the One Billion Math app showed meaningful improvements in early math achievement compared to students receiving regular classroom instruction. The size of the improvement was moderate, with an estimated effect size of 0.42 and a 95% confidence interval from 0.24 to 0.61.",
         effectSize: "+0.42 SD"
       },
       {
-        id: 9,
-        title: "ST Math (Spatial-Temporal Mathematics)",
-        study: "Rutherford, T., Farkas, G., Duncan, G., Burchinal, M., Kibrick, M., Graham, J., Richland, L., Tran, N., Schneider, S., Duran, L., & Martinez, M. E. (2014). A randomized trial of an elementary school mathematics software intervention: Spatial-temporal math. Journal of Research on Educational Effectiveness, 7(4), 358–383.",
-        studyLink: "https://doi.org/10.1080/19345747.2013.856795",
-        description: "Game-based software using visual, spatial-temporal representations to teach mathematical concepts with minimal language, featuring an animated penguin character solving puzzles.",
-        fullDescription: "ST Math (Spatial-Temporal Math) is a game-based software program that uses animated visual representations to teach mathematical concepts with minimal language. Students guide an animated penguin character named JiJi through increasingly complex mathematical puzzles that build conceptual understanding through spatial reasoning. The program covers topics including number sense, counting, addition, subtraction, place value, fractions, and measurement. Problems are presented visually first, requiring students to manipulate objects and observe mathematical relationships before being introduced to traditional symbolic notation. The software provides immediate visual feedback, showing students the consequences of their choices. Students must achieve mastery (passing a criterion number of puzzles) before progressing to new content.",
-        implementation: "The intervention was implemented as a supplement to regular mathematics instruction during the school day. Students used ST Math for 60-90 minutes per week across 2-3 sessions, either during dedicated computer lab time or on classroom computers/tablets. Implementation occurred throughout the academic year (approximately 9 months). Teachers monitored student progress through web-based dashboards but students worked independently through the software.",
-        sample: "2,733 students from 30 elementary schools across 12 districts in California. Students were from grades K-2, with diverse demographic backgrounds including 60% Hispanic, 22% White, 7% Asian, and 5% African American students. About 67% qualified for free/reduced lunch.",
-        outcome: "State standardized mathematics assessment (California Standards Test for grades 2-5) administered at the end of the school year.",
-        effectSize: "+0.36 SD"
-      },
-      {
-        id: 10,
-        title: "Fast ForWord Language",
-        study: "Borman, G. D., Benson, J., & Overman, L. T. (2005). Families, Schools, and Summer Learning. The Elementary School Journal, 106(2), 131-150.",
-        studyLink: "https://doi.org/10.1086/496910",
-        description: "Adaptive software targeting phonological awareness and language processing through game-like exercises that adjust difficulty based on student performance.",
-        fullDescription: "Fast ForWord Language is an adaptive computer-based intervention designed to build foundational language and reading skills through intensive practice. The program uses game-like exercises that target phonological awareness, phonemic awareness, and language processing skills. Exercises are acoustically modified to slow down and emphasize speech sounds, helping students better discriminate phonemes. The software continuously adapts difficulty based on student performance, maintaining an appropriate challenge level. Students complete multiple short exercises per session, receiving immediate feedback and earning points for correct responses. The program requires intensive use (90-100 minutes daily) to achieve intended effects.",
-        implementation: "The intervention was delivered during a 6-week summer program, with students using Fast ForWord for 90-100 minutes daily, five days per week. Students worked individually on computers in a supervised setting. Each session was divided into multiple exercise blocks with short breaks between them. Trained staff supervised computer lab sessions to ensure students stayed on task and troubleshoot technical issues, but did not provide direct instruction.",
-        sample: "103 students entering first through fifth grades who participated in a summer learning program in a mid-sized Northeastern city. Students were primarily from low-income families and at risk for summer learning loss. Sample was ethnically diverse with predominantly African American and Hispanic students.",
-        outcome: "Woodcock Reading Mastery Test – Word Attack subtest (measuring phonics and decoding of pseudowords) and Word Identification subtest (measuring sight word recognition). Tests were administered at the beginning and end of the summer program.",
+        id: 36438171,
+        title: "Intelligent Tutoring System for Middle School Mathematics",
+        study: "Koedinger, K. R., Anderson, J. R., Hadley, W. H., & Mark, M. A. (1997). Intelligent tutoring goes to school in the big city. International Journal of Artificial Intelligence in Education, 8, 30–43.",
+        studyLink: "https://www.semanticscholar.org/paper/36438171",
+        description: "Step-by-step algebra tutoring system that provides immediate feedback, adapts to student responses, and mirrors one-on-one tutoring by prompting through problem-solving steps.",
+        whatItDoes: "The program is an intelligent tutoring system designed to support students as they learn algebra. It provides step-by-step guidance while students solve problems, gives immediate feedback when errors occur, and adapts instruction based on each student's responses. The system is designed to mirror one-on-one tutoring by prompting students through problem-solving steps rather than simply giving answers.",
+        howItWasUsed: "Students used the tutoring software during regular math class time as part of their algebra instruction. The software guided students through practice problems, monitored their progress in real time, and adjusted instruction to address individual misunderstandings. Teachers integrated the system into existing classroom routines rather than replacing instruction entirely.",
+        whoItWasTestedWith: "The study included middle school students enrolled in algebra courses in an urban school district in the United States. The sample included students from multiple classrooms serving diverse student populations.",
+        whatWasMeasured: "Student learning was measured using assessments of algebra problem-solving and procedural knowledge aligned with the instructional content covered during the intervention.",
+        howWellItWorked: "Students who used the intelligent tutoring system demonstrated higher mathematics achievement than students receiving traditional instruction alone. The size of the improvement was moderate, with an estimated effect size of 0.41 and a 95% confidence interval from 0.30 to 0.53.",
         effectSize: "+0.41 SD"
       },
       {
-        id: 11,
-        title: "Waterford Early Reading Program",
-        study: "Paterson, W. A., Henry, J. J., O'Quin, K., Ceprano, M. A., & Blue, E. V. (2003). Investigating the effectiveness of an integrated learning system on early emergent readers. Reading Research Quarterly, 38(2), 172-207.",
-        studyLink: "https://doi.org/10.1598/RRQ.38.2.2",
-        description: "Comprehensive early literacy software covering phonological awareness, phonics, vocabulary, and comprehension through interactive lessons with speech recognition.",
-        fullDescription: "The Waterford Early Reading Program (WERP) is a comprehensive computer-based literacy curriculum designed for kindergarten through second grade. The program provides individualized instruction across multiple literacy domains including phonological awareness, phonics, sight word recognition, vocabulary, fluency, and comprehension. Lessons incorporate multimedia elements including animation, music, recorded speech, and video. The software uses speech recognition technology to provide feedback on students' oral reading. Students progress through a carefully sequenced curriculum that adapts to their performance, with built-in assessments determining placement and pacing. Activities are game-like and designed to be engaging while building essential reading skills.",
-        implementation: "Students used the Waterford program during the regular school day, typically for 20-30 minutes per session, three to five times per week throughout the school year. Students worked individually on computers in dedicated computer labs or on classroom computers, often rotating through stations. Teachers monitored student progress through management software but students worked independently through the program. Implementation occurred from the beginning to the end of the academic year (approximately 9 months).",
-        sample: "150 kindergarten students from three elementary schools in a suburban school district in the southeastern United States. Students were predominantly from middle-class families, with approximately 30% qualifying for free or reduced-price lunch. The sample was racially diverse, including White, African American, and Hispanic students.",
-        outcome: "Dynamic Indicators of Basic Early Literacy Skills (DIBELS) including Letter Naming Fluency, Initial Sound Fluency, and Phoneme Segmentation Fluency subtests. Students were assessed in fall and spring of the kindergarten year.",
-        effectSize: "+0.38 SD"
+        id: 36834226,
+        title: "Online Laboratory Simulations and Serious Educational Games for Science",
+        study: "Lamb, R. L. (2016). Examination of the effects of dimensionality on cognitive processing in science: A computational modeling experiment comparing online laboratory simulations and serious educational games. Journal of Science Education and Technology, 25, 1–15.",
+        studyLink: "https://doi.org/10.1007/s10956-015-9580-2",
+        description: "Two-dimensional online lab simulations and three-dimensional serious educational games for high school science, allowing students to interact with biological processes in digital environments.",
+        whatItDoes: "This study compares two technology-based instructional approaches—two-dimensional online laboratory simulations and three-dimensional serious educational games—with traditional lecture-based instruction. Both technology conditions aim to improve students' science content understanding by allowing them to interact with representations of biological processes, while the three-dimensional games additionally immerse students in spatially rich, problem-based environments.",
+        howItWasUsed: "The study used a block-randomized pretest–posttest design across intact high school classes. Students participated in one of three conditions over an 8-week instructional period: a two-dimensional online lab simulation, a three-dimensional serious educational game, or traditional lecture-based instruction. Teachers' roles were minimized in the technology conditions, with instruction largely embedded within the digital environments.",
+        whoItWasTestedWith: "Participants were 11th- and 12th-grade high school students (N = 551) from U.S. secondary schools. Stratified random sampling was used to create balanced groups across instructional conditions.",
+        whatWasMeasured: "Primary outcomes included science content achievement, measured using a criterion-referenced test drawn from released state science exam items focused on biotechnology concepts (e.g., DNA base-pair identification and polymerase chain reaction).",
+        howWellItWorked: "Technology-based instruction produced moderate, statistically significant improvements in science achievement compared with traditional instruction. The estimated effect size was g ≈ 0.40, with a 95% confidence interval of [0.17, 0.63], indicating a reliable positive effect. Results favored both online simulations and serious educational games, with the strongest gains observed for three-dimensional game-based instruction.",
+        effectSize: "+0.40 SD"
+      },
+      {
+        id: 36440669,
+        title: "Computer-Aided Instruction for Pre-Algebra and Algebra (I Can Learn®)",
+        study: "Barrow, L., Markman, L., & Rouse, C. E. (2009). Technology's edge: The educational benefits of computer-aided instruction. American Economic Journal: Economic Policy, 1(1), 52–74.",
+        studyLink: "https://doi.org/10.1257/pol.1.1.52",
+        description: "Self-paced computer program guiding students through pre-algebra and algebra with explanations, worked examples, practice opportunities, and immediate feedback.",
+        whatItDoes: "I Can Learn® is a computer-based mathematics program designed to support students in pre-algebra and algebra through structured, self-paced instruction. The software guides students step by step through math problems, providing explanations, worked examples, practice opportunities, and immediate feedback. The focus is on building strong procedural fluency in algebra while ensuring students receive consistent instruction aligned to course content.",
+        howItWasUsed: "Students used I Can Learn® during regular school hours in computer lab settings. The program replaced part of traditional classroom instruction rather than serving only as a supplement. Students worked with the software multiple times per week—often across an academic year—during scheduled math periods, with teachers and lab aides present to supervise, monitor progress, and provide support when needed.",
+        whoItWasTestedWith: "The study included middle school and high school students enrolled in pre-algebra and algebra courses in large urban school districts in the United States. Schools primarily served low-income student populations, and students entered the study with a wide range of prior math achievement levels.",
+        whatWasMeasured: "Student learning was measured using mathematics achievement outcomes, including algebra-focused standardized assessments, district benchmark exams, and course-aligned achievement tests.",
+        howWellItWorked: "Students who received instruction using I Can Learn® showed meaningful improvements in mathematics achievement compared to students receiving traditional instruction alone. The improvement was moderate in size, with an estimated effect size of 0.36 and a 95% confidence interval from 0.21 to 0.51, indicating that the gains were statistically reliable and unlikely to be due to chance.",
+        effectSize: "+0.36 SD"
+      },
+      {
+        id: 36440603,
+        title: "In-Home Online Computer-Assisted Learning for Remedial Mathematics",
+        study: "Tang, B., Ting, T.-T., Wu, C.-I., Ma, Y., Mo, D., Hung, W.-T., & Rozelle, S. (2020). The impact of online computer assisted learning at home for disadvantaged children in Taiwan: Evidence from a randomized experiment. Sustainability, 12, 10092.",
+        studyLink: "https://doi.org/10.3390/su122310092",
+        description: "Online, game-based computer-assisted learning for mathematics that students complete at home, offering structured remedial practice aligned with school curriculum.",
+        whatItDoes: "This intervention provides online, game-based computer-assisted learning for mathematics that students complete at home, outside of regular school hours. The program is designed to offer structured, remedial practice aligned with the school curriculum, targeting foundational math skills for disadvantaged students who lack access to tutoring or other learning supports.",
+        howItWasUsed: "Students assigned to the treatment group were asked to complete weekly 60-minute online CAL sessions at home over one or two semesters. The software delivered standardized math exercises and immediate feedback, while teachers' involvement was limited to technical support and reminders, with no direct instructional assistance during sessions.",
+        whoItWasTestedWith: "The study included fourth- and fifth-grade students from 84 rural schools in Taiwan, serving predominantly Yuanzhumin (Indigenous) students. Schools were randomly assigned to treatment or control conditions, and analyses focused on students with home internet access.",
+        whatWasMeasured: "Primary outcomes included mathematics achievement, measured using standardized math tests administered at baseline, midline, and endline.",
+        howWellItWorked: "Students offered in-home CAL demonstrated moderate, statistically significant improvements in math achievement relative to control students. The pooled effect size was g ≈ 0.36, with a 95% confidence interval of [0.21, 0.51], indicating a reliable positive impact. Effects were larger among students who consistently engaged with the program, though the estimate summarized here reflects overall program impacts.",
+        effectSize: "+0.36 SD"
+      },
+      {
+        id: 36438334,
+        title: "Computer-Assisted Instruction for Learning Multiplication",
+        study: "Chang, K.-E., Sung, Y.-T., Chen, Y.-L., & Huang, L.-H. (2008). Learning multiplication through computer-assisted learning activities. Computers in Human Behavior, 24, 2904–2916.",
+        studyLink: "https://doi.org/10.1016/j.chb.2008.04.014",
+        description: "Visual, game-like activities combining conceptual understanding of multiplication with procedural practice, using grouping, comparison, and arrays before emphasizing fact fluency.",
+        whatItDoes: "This computer-assisted learning (CAL) program is designed to help young students learn multiplication by combining conceptual understanding (what multiplication means) with procedural practice (how to compute multiplication facts). Rather than focusing only on memorization, the program uses visual, game-like activities to help students understand multiplication as grouping, comparison, and arrays before emphasizing speed and accuracy with facts.",
+        howItWasUsed: "Students participated in a structured sequence of eight computer-based activities organized into three stages: (1) understanding basic multiplication concepts, (2) learning the meaning and properties of multiplication (such as commutativity), and (3) practicing multiplication facts. All students received the same classroom instruction, after which the intervention group used the computer activities while the comparison group worked with traditional written materials. The intervention took place over approximately three weeks, with repeated, guided practice during regular instructional time.",
+        whoItWasTestedWith: "The study included second-grade students (approximately 8 years old) from an elementary school in Taipei, Taiwan. Students had little to no prior formal instruction in multiplication, and the sample included learners with a wide range of initial math knowledge.",
+        whatWasMeasured: "Student learning was assessed using researcher-developed tests covering basic multiplication concepts (e.g., equal groups, arrays), understanding of the meaning and properties of multiplication, and multiplication-related computation skills. An overall multiplication achievement score was also examined.",
+        howWellItWorked: "Overall, students who used the computer-assisted learning activities demonstrated moderate improvements in multiplication learning compared to students using traditional materials. The estimated effect size was approximately 0.35, with a 95% confidence interval of [0.05, 0.65], indicating a statistically reliable positive effect. Gains were strongest for students with lower prior knowledge, particularly in understanding multiplication concepts and properties. The program was less effective for improving computation speed and accuracy over the short instructional period.",
+        effectSize: "+0.35 SD"
+      },
+      {
+        id: 36438167,
+        title: "Tutorial and Edutainment Software for Teaching Cell Division",
+        study: "Kara, Y., & Yeşilyurt, S. (2008). Comparing the impacts of tutorial and edutainment software programs on students' achievements, misconceptions, and attitudes towards biology. Journal of Science Education and Technology, 17, 32–41.",
+        studyLink: "https://doi.org/10.1007/s10956-007-9087-7",
+        description: "Computer-assisted instructional software teaching cell division through either step-by-step tutorial presentations or game-like edutainment environments with narrative engagement.",
+        whatItDoes: "This approach uses computer-assisted instructional software to teach the biology topic of cell division (mitosis and meiosis). Two types of software were examined: Tutorial software, which presents information step by step using text, animations, diagrams, and feedback, and Edutainment software, which embeds biology content within a game-like, narrative environment designed to engage students emotionally and visually. Both approaches aim to improve students' conceptual understanding, reduce common misconceptions, and support learning beyond traditional lecture-based instruction.",
+        howItWasUsed: "Instruction took place during regular biology lessons over four class periods (45 minutes each). Students in the experimental groups worked individually in a computer lab using the instructional software, following teacher introductions but receiving minimal direct guidance during use. The tutorial group used a structured CD-ROM–based biology program, while the edutainment group used a role-playing science adventure game focused on solving biology-related problems. A control group received traditional lecture-based instruction.",
+        whoItWasTestedWith: "The study included 72 ninth-grade students (ages 14–15) from a public secondary school in Turkey. Students were randomly assigned to a tutorial software group, an edutainment software group, or a traditional instruction control group. All students were computer literate but had no prior experience using computer-assisted instruction for biology.",
+        whatWasMeasured: "Student outcomes included biology achievement related to cell division (researcher-developed achievement test), conceptual understanding and misconceptions about mitosis and meiosis (concept test), and attitudes toward biology (biology attitude scale).",
+        howWellItWorked: "Students who used instructional software demonstrated stronger biology achievement than students receiving traditional instruction. The overall improvement associated with computer-assisted instruction was moderate in size, with an estimated effect size of 0.35 and a 95% confidence interval from 0.05 to 0.65, indicating a statistically reliable positive effect. Both tutorial and edutainment software helped reduce misconceptions, while the edutainment software was particularly effective at improving students' attitudes toward biology.",
+        effectSize: "+0.35 SD"
+      },
+      {
+        id: 36438533,
+        title: "Live Interactive Satellite-Based Instruction for Rural Schools",
+        study: "Johnston, J., & Ksoll, C. (2022). Effectiveness of interactive satellite-transmitted instruction: Experimental evidence from Ghanaian primary schools. Economics of Education Review, 91, 102315.",
+        studyLink: "https://doi.org/10.1016/j.econedurev.2022.102315",
+        description: "Real-time, two-way video instruction from expert teachers delivered via satellite to multiple rural classrooms, focusing on foundational literacy and numeracy.",
+        whatItDoes: "This program delivers real-time, two-way video instruction from expert teachers in a central studio to multiple rural classrooms simultaneously using satellite technology. Classroom facilitators support students locally while instruction focuses on basic literacy and numeracy skills aligned with students' learning levels.",
+        howItWasUsed: "The intervention was implemented as a cluster randomized controlled trial in rural Ghanaian primary schools. Students received approximately two hours per day of live satellite instruction, integrated into the regular school schedule, with instruction adjusted over time to better match student ability levels.",
+        whoItWasTestedWith: "The study included primary school students in grades 2–5 from low-income, rural communities with limited access to trained teachers. Analyses focused on students exposed to the program for one or two full academic years.",
+        whatWasMeasured: "Student outcomes were assessed using standardized early-grade measures of numeracy (e.g., number recognition, basic operations) and literacy (e.g., letter recognition, phonics, reading fluency).",
+        howWellItWorked: "Students receiving satellite-based instruction demonstrated moderate, statistically significant learning gains compared with control students. The pooled effect size was g ≈ 0.34, with a 95% confidence interval of [0.25, 0.42], indicating a reliable positive impact on foundational academic skills.",
+        effectSize: "+0.34 SD"
+      },
+      {
+        id: 36439801,
+        title: "Virtual Versus Physical Inquiry-Based Chemistry Labs",
+        study: "Pyatt, K., & Sims, R. (2012). Virtual and physical experimentation in inquiry-based science labs: Attitudes, performance and access. Journal of Science Education and Technology, 21, 133–147.",
+        studyLink: "https://doi.org/10.1007/s10956-011-9291-6",
+        description: "Computer-simulated chemistry labs compared with traditional hands-on physical labs, both using inquiry-based instructional frameworks for stoichiometry investigations.",
+        whatItDoes: "This approach compares computer-simulated (virtual) chemistry labs with traditional hands-on physical labs within an inquiry-based instructional framework. Virtual labs allow students to conduct experiments, manipulate variables, and analyze data using simulations that mirror real laboratory procedures, with the goal of supporting conceptual understanding and increasing access to laboratory experiences.",
+        howItWasUsed: "The study employed an experimental crossover design in first-year high school chemistry classes. Students completed two stoichiometry laboratory investigations, experiencing both virtual and physical lab formats across trials. Instructional content, procedures, and assessments were held constant, with the instructional medium (virtual vs. physical) as the key difference.",
+        whoItWasTestedWith: "Participants were 184 first-year secondary chemistry students from a suburban U.S. public high school. All students experienced both virtual and physical lab conditions over the two-year study period.",
+        whatWasMeasured: "Outcomes included student performance on post-lab assessments measuring data interpretation, hypothesis formulation, and conceptual understanding, and student attitudes toward lab usefulness, equipment usability, and open-endedness (measured via a researcher-developed questionnaire).",
+        howWellItWorked: "Across outcomes, virtual and physical labs produced small-to-moderate positive effects on student learning. The pooled effect size was g ≈ 0.30, with a 95% confidence interval of [0.01, 0.59], indicating a modest but statistically reliable advantage associated with virtual inquiry-based laboratory experiences.",
+        effectSize: "+0.30 SD"
+      },
+      {
+        id: 36438159,
+        title: "Student–Teacher–Scientist Partnership with Online Mentoring",
+        study: "Taylor, J. A., Adams, C. T., Westbrook, A. L., Creasap Gee, J., Spybrook, J. K., Kowalski, S. M., Gardner, A. L., & Bloom, M. (2022). The effect of a student–teacher–scientist partnership program on high school students' science achievement and attitudes about scientists. Journal of Research in Science Teaching, 59(3), 423–457.",
+        studyLink: "https://doi.org/10.1002/tea.21730",
+        description: "Project-based biology instruction integrated with asynchronous online mentoring from professional scientists, focusing on photosynthesis and respiration investigations.",
+        whatItDoes: "This program integrates project-based biology instruction with asynchronous online mentoring from professional scientists, aiming to deepen students' understanding of photosynthesis and respiration while increasing engagement with authentic scientific practices.",
+        howItWasUsed: "Teachers implemented the PlantingScience Power of Sunlight module during regular instruction. Students worked in small teams to conduct guided and student-designed investigations and communicated online with scientist mentors who provided feedback on research questions, methods, and interpretations.",
+        whoItWasTestedWith: "The study involved U.S. high school biology students taught by teachers who were randomly assigned to either the partnership program or business-as-usual instruction. The sample was demographically similar to the national population of high schools.",
+        whatWasMeasured: "Primary outcomes included science achievement focused on photosynthesis and cellular respiration.",
+        howWellItWorked: "Students in the partnership program showed small but statistically significant gains in science achievement compared to business-as-usual instruction. The estimated effect size was g ≈ 0.21, with a 95% confidence interval of [0.03, 0.39], indicating a positive and reliable effect.",
+        effectSize: "+0.21 SD"
+      },
+      {
+        id: 36439562,
+        title: "Computer-Assisted Learning for Remedial Math with Long-Term Follow-Up",
+        study: "Mo, D., Zhang, L., Wang, J., Huang, W., Shi, Y., Boswell, M., & Rozelle, S. (2015). Persistence of learning gains from computer assisted learning: Experimental evidence from China. Journal of Computer Assisted Learning.",
+        studyLink: "https://doi.org/10.1111/jcal.12125",
+        description: "Game-based computer-assisted learning software providing structured remedial mathematics practice with emphasis on sustaining learning gains over time.",
+        whatItDoes: "This intervention uses game-based computer-assisted learning software to provide structured, remedial mathematics practice aligned with the national curriculum. The software delivers animated lessons, guided practice, and immediate feedback, aiming to strengthen foundational math skills and sustain learning over time rather than producing only short-term gains.",
+        howItWasUsed: "The CAL program was implemented as a school-level randomized controlled trial in rural China. Boarding students participated in two 40-minute CAL sessions per week, held outside regular class time, over three consecutive semesters (1.5 years). Teacher involvement was limited to supervision and technical support, with no direct math instruction during CAL sessions.",
+        whoItWasTestedWith: "The study included 2,741 third- and fifth-grade boarding students from 72 rural elementary schools in Shaanxi Province, China. Schools were randomly assigned to treatment or control conditions, and analyses focused on academically vulnerable rural students.",
+        whatWasMeasured: "Primary outcomes included mathematics achievement, measured using standardized math tests administered at baseline and follow-up waves over the 1.5-year period.",
+        howWellItWorked: "Students offered CAL showed small but statistically reliable improvements in math achievement relative to control students. The pooled effect size was g ≈ 0.21, with a 95% confidence interval of [0.03, 0.39], indicating a positive and persistent effect. Results suggest that learning gains from CAL were sustained over time rather than fading after initial exposure.",
+        effectSize: "+0.21 SD"
+      },
+      {
+        id: 36439629,
+        title: "Online Algebra I Course for Middle School Students",
+        study: "Heppen, J. B., Allensworth, E., Walters, K., Rickles, J., Taylor, S. S., & Sorensen, N. (2012). Access to Algebra I: The effects of online mathematics for grade 8 students. National Center for Education Evaluation and Regional Assistance (NCEE).",
+        studyLink: "https://ies.ed.gov/ncee/pubs/20134005/",
+        description: "Online Algebra I course for algebra-ready eighth-graders attending schools without in-person Algebra I, supported by on-site facilitators.",
+        whatItDoes: "This intervention provides an online Algebra I course to eighth-grade students who are academically ready for algebra but attend middle schools that do not typically offer Algebra I. The goal is to broaden access to advanced mathematics coursework using online delivery rather than traditional in-person instruction.",
+        howItWasUsed: "The study used a cluster randomized controlled trial, with schools randomly assigned to offer the online Algebra I course or continue with business-as-usual mathematics instruction. Students in treatment schools took Algebra I online during the regular school day, supported by on-site facilitators, while control students remained in their standard math courses.",
+        whoItWasTestedWith: "Participants were algebra-ready eighth-grade students from U.S. middle schools that lacked in-person Algebra I offerings. The analytic sample included students from 68 schools across multiple districts.",
+        whatWasMeasured: "Primary outcomes included algebra achievement, measured using a standardized Algebra I posttest. Secondary outcomes included general mathematics achievement and subsequent high school coursetaking.",
+        howWellItWorked: "Students offered online Algebra I showed small but statistically significant gains in mathematics achievement compared with students in business-as-usual instruction. The pooled effect size was g ≈ 0.18, with a 95% confidence interval of [0.03, 0.33], indicating a modest positive impact. The authors note that effects reflect increased access to Algebra I and cannot be fully separated from the online mode of instruction.",
+        effectSize: "+0.18 SD"
       }
     ];
 
@@ -158,6 +521,12 @@
       const [favorites, setFavorites] = useState([]);
       const [showFavorites, setShowFavorites] = useState(false);
       const [selectedIntervention, setSelectedIntervention] = useState(null);
+      const [selectedFilters, setSelectedFilters] = useState({
+        gradeLevel: [],
+        subject: [],
+        deliveryMode: [],
+        instructionalApproach: []
+      });
 
       const toggleFavorite = (id) => {
         setFavorites(prev =>
@@ -167,11 +536,42 @@
         );
       };
 
+      const toggleFilter = (category, value) => {
+        setSelectedFilters(prev => {
+          const currentFilters = prev[category];
+          const newFilters = currentFilters.includes(value)
+            ? currentFilters.filter(f => f !== value)
+            : [...currentFilters, value];
+          return { ...prev, [category]: newFilters };
+        });
+      };
+
+      const clearAllFilters = () => {
+        setSelectedFilters({
+          gradeLevel: [],
+          subject: [],
+          deliveryMode: [],
+          instructionalApproach: []
+        });
+      };
+
+      const hasActiveFilters = () => {
+        return Object.values(selectedFilters).some(arr => arr.length > 0);
+      };
+
       const filteredInterventions = interventions.filter(intervention => {
         const matchesSearch = intervention.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           intervention.description.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesFavorites = !showFavorites || favorites.includes(intervention.id);
-        return matchesSearch && matchesFavorites;
+        
+        // Check if intervention matches selected filters
+        const matchesFilters = Object.keys(selectedFilters).every(category => {
+          const selectedValues = selectedFilters[category];
+          if (selectedValues.length === 0) return true;
+          return selectedValues.some(value => intervention.tags[category].includes(value));
+        });
+
+        return matchesSearch && matchesFavorites && matchesFilters;
       });
 
       // Landing Page
@@ -360,9 +760,13 @@
                   <div className="flex-1">
                     <h1 className="text-3xl font-bold text-gray-900 mb-4">{intervention.title}</h1>
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg font-semibold flex items-center gap-2">
+                      <div className={`px-4 py-2 rounded-lg font-semibold flex items-center gap-2 ${
+                        intervention.effectLabel === 'Large Effect'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-blue-100 text-blue-800'
+                      }`}>
                         <i data-lucide="trending-up" className="w-5 h-5"></i>
-                        Effect Size: {intervention.effectSize}
+                        {intervention.effectLabel}: {intervention.effectSize}
                       </div>
                     </div>
                   </div>
@@ -376,38 +780,60 @@
 
                 <div className="space-y-8">
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900 mb-3">Intervention Description</h2>
-                    <p className="text-gray-700 leading-relaxed">{intervention.fullDescription}</p>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <i data-lucide="file-text" className="w-5 h-5 text-blue-600"></i>
+                      {intervention.id === 36836013 ? 'What the approach does' : 'What the program does'}
+                    </h2>
+                    <p className="text-gray-700 leading-relaxed">{intervention.whatItDoes}</p>
                   </div>
 
                   <div className="bg-blue-50 rounded-lg p-6">
                     <h2 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                       <i data-lucide="book-open" className="w-5 h-5 text-blue-600"></i>
-                      Implementation
+                      How it was used
                     </h2>
-                    <p className="text-gray-700 leading-relaxed">{intervention.implementation}</p>
+                    <p className="text-gray-700 leading-relaxed">{intervention.howItWasUsed}</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                         <i data-lucide="users" className="w-5 h-5 text-blue-600"></i>
-                        Sample
+                        Who it was tested with
                       </h3>
-                      <p className="text-gray-700">{intervention.sample}</p>
+                      <p className="text-gray-700">{intervention.whoItWasTestedWith}</p>
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-6">
                       <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                         <i data-lucide="graduation-cap" className="w-5 h-5 text-blue-600"></i>
-                        Outcome Measure
+                        What was measured
                       </h3>
-                      <p className="text-gray-700">{intervention.outcome}</p>
+                      <p className="text-gray-700">{intervention.whatWasMeasured}</p>
                     </div>
                   </div>
 
+                  <div className={`rounded-lg p-6 ${
+                    intervention.effectLabel === 'Large Effect'
+                      ? 'bg-green-50'
+                      : 'bg-blue-50'
+                  }`}>
+                    <h2 className={`text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2`}>
+                      <i data-lucide="trending-up" className={`w-5 h-5 ${
+                        intervention.effectLabel === 'Large Effect'
+                          ? 'text-green-600'
+                          : 'text-blue-600'
+                      }`}></i>
+                      How well it worked
+                    </h2>
+                    <p className="text-gray-700 leading-relaxed">{intervention.howWellItWorked}</p>
+                  </div>
+
                   <div className="border-t pt-6">
-                    <h2 className="text-xl font-semibold text-gray-900 mb-3">Study Citation</h2>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <i data-lucide="external-link" className="w-5 h-5 text-blue-600"></i>
+                      Study Citation
+                    </h2>
                     <p className="text-gray-700 mb-3">{intervention.study}</p>
                     <a 
                       href={intervention.studyLink}
@@ -468,17 +894,109 @@
                 />
               </div>
 
-              <button
-                onClick={() => setShowFavorites(!showFavorites)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
-                  showFavorites
-                    ? 'bg-red-100 text-red-700 border border-red-300'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
-                }`}
-              >
-                <i data-lucide="heart" className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`}></i>
-                {showFavorites ? 'Showing Favorites' : 'Show Favorites'} ({favorites.length})
-              </button>
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    onClick={() => setShowFavorites(!showFavorites)}
+                    className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
+                      showFavorites
+                        ? 'bg-red-100 text-red-700 border border-red-300'
+                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                    }`}
+                  >
+                    <i data-lucide="heart" className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`}></i>
+                    {showFavorites ? 'Showing Favorites' : 'Show Favorites'} ({favorites.length})
+                  </button>
+
+                  {hasActiveFilters() && (
+                    <button
+                      onClick={clearAllFilters}
+                      className="px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300"
+                    >
+                      <i data-lucide="x" className="w-4 h-4"></i>
+                      Clear Filters
+                    </button>
+                  )}
+                </div>
+
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Grade Level:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Elementary School', 'Middle School', 'High School'].map(grade => (
+                        <button
+                          key={grade}
+                          onClick={() => toggleFilter('gradeLevel', grade)}
+                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                            selectedFilters.gradeLevel.includes(grade)
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {grade}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Subject:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Mathematics', 'Science'].map(subject => (
+                        <button
+                          key={subject}
+                          onClick={() => toggleFilter('subject', subject)}
+                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                            selectedFilters.subject.includes(subject)
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {subject}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Delivery Mode:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Computer/Software', 'Game-Based', 'Live Instruction', 'Blended'].map(mode => (
+                        <button
+                          key={mode}
+                          onClick={() => toggleFilter('deliveryMode', mode)}
+                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                            selectedFilters.deliveryMode.includes(mode)
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {mode}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Instructional Approach:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Adaptive/Personalized', 'Teacher-Supported', 'Self-Directed'].map(approach => (
+                        <button
+                          key={approach}
+                          onClick={() => toggleFilter('instructionalApproach', approach)}
+                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                            selectedFilters.instructionalApproach.includes(approach)
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {approach}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {filteredInterventions.length === 0 ? (
@@ -498,9 +1016,13 @@
                         <div className="flex-1">
                           <h3 className="text-xl font-semibold text-gray-900 mb-2">{intervention.title}</h3>
                           <p className="text-gray-600 mb-3">{intervention.description}</p>
-                          <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
+                          <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-lg text-sm font-medium ${
+                            intervention.effectLabel === 'Large Effect' 
+                              ? 'bg-green-100 text-green-800' 
+                              : 'bg-blue-100 text-blue-800'
+                          }`}>
                             <i data-lucide="trending-up" className="w-4 h-4"></i>
-                            Effect Size: {intervention.effectSize}
+                            {intervention.effectLabel}: {intervention.effectSize}
                           </div>
                         </div>
                         <button
@@ -526,8 +1048,15 @@
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<RemoteEdHub />);
 
-    // Initialize Lucide icons after render
-    lucide.createIcons();
+    // Initialize Lucide icons and re-initialize on any changes
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+    
+    // Re-initialize icons whenever the DOM updates
+    setInterval(() => {
+      lucide.createIcons();
+    }, 500);
   </script>
 </body>
 </html>
