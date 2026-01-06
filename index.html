@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remote Ed Hub - Evidence-Based Interventions</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+    const { Heart, Search, BookOpen, ArrowRight, FileText, ExternalLink, GraduationCap, Users, TrendingUp } = lucide;
+
+    const interventions = [
+      {
+        id: 1,
+        title: "GO Solve Word Problems",
+        study: "Fede, J. L., Pierce, M. E., Matthews, W. J., & Wells, C. S. (2013). The Effects of a Computer-Assisted, Schema-Based Instruction Intervention on Word Problem-Solving Skills of Low-Performing Fifth Grade Students. Journal of Special Education Technology, 28(1), 9-21.",
+        studyLink: "https://doi.org/10.1177/016264341302800102",
+        description: "Uses a carefully sequenced approach to teach math word problem-solving, guiding students through step-by-step tutorials, worked examples, and interactive practice.",
+        fullDescription: "GO Solve Word Problems uses a carefully sequenced approach to teach math word problem-solving, guiding students through step-by-step tutorials, worked examples, and interactive practice. Each module builds on prior learning, beginning with short animated lessons that introduce problem types, followed by targeted practice and review. Visual models, such as graphic organizers, help students represent mathematical relationships, and students must meet clear performance benchmarks before progressing. This consistent, scaffolded structure helps ensure students develop a solid understanding of how to approach and solve different types of word problems.",
+        implementation: "The intervention was implemented over a 12-week period, with students in the experimental group using the GO Solve Word Problems software twice a week for 30-minute sessions during school hours.",
+        sample: "32 fifth-grade students from one middle school in Western Massachusetts. All students were identified as struggling with word problems.",
+        outcome: "MCAS Word Problem Subset – A researcher-selected subset of word problems from past Massachusetts Comprehensive Assessment System (MCAS) tests.",
+        effectSize: "+0.46 SD"
+      },
+      {
+        id: 2,
+        title: "I CAN Learn®",
+        study: "Barrow, L., Markman, L., & Rouse, C. E. (2009). Technology's edge: The educational benefits of computer-aided instruction. American Economic Journal: Economic Policy, 1(1), 52–74.",
+        studyLink: "https://doi.org/10.1257/pol.1.1.52",
+        description: "A computer-based mathematics curriculum designed to support student learning in Algebra and Pre-Algebra through interactive lessons aligned with NCTM standards.",
+        fullDescription: "I CAN Learn® (ICL) is a computer-based mathematics curriculum designed to support student learning in Algebra and Pre-Algebra through interactive lessons aligned with NCTM standards. The program includes over 600 lessons presented in a sequenced, mastery-based format that combines video-based instruction, guided practice, and immediate feedback. Students proceed at their own pace, and the system automatically adjusts to their performance, allowing for differentiated instruction.",
+        implementation: "The intervention was implemented as part of regular school instruction in middle and high schools. Students used the computer-based curriculum in dedicated computer labs for one full class period per day, typically replacing their traditional math class. The implementation spanned an entire academic year, during which students progressed through sequenced lessons covering Pre-Algebra and Algebra I content.",
+        sample: "1,588 middle and high school students across three urban school districts in the U.S.",
+        outcome: "NWEA Algebra Achievement Test",
+        effectSize: "+0.36 SD"
+      },
+      {
+        id: 3,
+        title: "Assessment and Learning in Knowledge Spaces (ALEKS)",
+        study: "Wilder, S., & Berry, L. (2016). Emporium model: The key to content retention in secondary math courses. Journal of Educators Online, 13(2), 53–75.",
+        studyLink: "https://doi.org/10.9743/JEO.2016.2.5",
+        description: "An adaptive online learning system that creates individualized learning paths based on diagnostic placement tests with immediate feedback and periodic reassessments.",
+        fullDescription: "ALEKS, an adaptive online learning system that created individualized learning paths based on a diagnostic placement test. Students progressed through math content at their own pace, receiving immediate feedback and periodic reassessments to ensure mastery. Teachers did not provide whole-class instruction but offered targeted, one-on-one support when students requested help. The structure emphasized mastery learning, frequent checks for understanding, and clear performance benchmarks, allowing students to advance only after demonstrating proficiency.",
+        implementation: "Students used the web-based ALEKS platform during scheduled class periods over a semester, with learning time dedicated to working independently in the system.",
+        sample: "62 high school students enrolled in an Algebra I course at a rural high school.",
+        outcome: "Teacher-created assessments aligned with the Algebra I curriculum.",
+        effectSize: "+0.45 SD"
+      },
+      {
+        id: 4,
+        title: "Teacher-Facilitated Mathematics Software",
+        study: "Afzal, M. T., & Gondal, M. B. (2010). Effect of Mathematics Software Facilitated Teaching on Students Learning. The International Journal of Technology, Knowledge and Society, 6(3), 111-120.",
+        studyLink: "https://doi.org/10.18848/1832-3669/CGP/v06i03/56125",
+        description: "Interactive mathematics software covering Integers, Algebra, and Geometry with teacher facilitation, where teachers help students grasp concepts, answer questions, and provide explanations.",
+        fullDescription: "Interactive software was developed using three chapters of sixth grade mathematics textbook (Integers, Algebra, and Geometry). In the teacher-facilitated approach, students learned in a computer lab with the software while the teacher actively helped them grasp concepts, answered questions, and gave explanations using chalk and board where necessary. Students were free to ask questions and seek help. A lab assistant was present to help with software use and hardware problems. This approach combined the benefits of technology with direct teacher support.",
+        implementation: "The intervention was implemented over three hours per week in a computer lab. Students worked with the mathematics software while receiving active teacher support. The teacher facilitated learning by helping students grasp concepts, answering questions, and providing explanations. A lab assistant was present to help with technical issues.",
+        sample: "104 sixth-grade students from four schools in Punjab Province, Pakistan (two urban, two rural; one male, one female school from each locality).",
+        outcome: "Researcher-developed achievement test covering the three instructional units (100 marks total: 60 marks MCQs, 28 marks short answers, 12 marks extended response questions).",
+        effectSize: "+0.50 SD"
+      },
+      {
+        id: 5,
+        title: "Merlin's Math Mill (Program-Controlled Adaptive Selection)",
+        study: "Schoppek, W. (2012). Dynamic Task Selection in Learning Arithmetic: The Role of Learner Control and Adaptation Based on a Hierarchy of Skills. Zeitschrift für Pädagogische Psychologie, 26(1), 43-55.",
+        studyLink: "https://doi.org/10.1024/1010-0652/a000059",
+        description: "Computer-assisted practice software that uses an adaptive algorithm to select arithmetic and word problems based on a hierarchy of skills, automatically adjusting problem difficulty to maintain moderate cognitive load.",
+        fullDescription: "Merlin's Math Mill is adaptive training software that selects practice problems based on a hypothetical hierarchy of skills in arithmetic (HiSkA). The program-controlled version automatically selected problems with predicted success rates between 0.80 and 0.95, corresponding to skills in the associative phase of development where practice is most effective. The software contains about 5,500 problems covering computation problems (equations), word problems (various types including multi-step problems), and number space problems. The adaptive algorithm calculated individual solution probabilities for each problem class and selected problems to regulate cognitive load to moderate levels, ensuring skills were neither too easy (autonomous phase) nor too difficult (cognitive phase requiring close supervision).",
+        implementation: "Students practiced with the software for seven 45-minute sessions over eight weeks (including one vacation week) in school computer labs. Half of each class worked with the software while the other half stayed with the teacher, then switched. The software provided immediate corrective feedback, allowing two attempts per problem. Students could unlock short video clips or jokes as rewards after successfully completing more than half the problems in a set.",
+        sample: "95 third-grade students (mean age 8;8 years) from nine classes across seven elementary schools in the Bayreuth region, Germany (two rural, five urban schools).",
+        outcome: "Researcher-developed arithmetic test with two parts: (1) 40 equation problems (10-minute limit), and (2) 22 word problems requiring calculations and written answers with numbers and units (20-minute limit). Scoring awarded points for correct calculations, correct numbers, and correct units.",
+        effectSize: "+0.43 SD"
+      },
+      {
+        id: 6,
+        title: "Simulation-Laboratory Combination for Learning Electricity",
+        study: "Jaakkola, T., & Nurmi, S. (2008). Fostering elementary school students' understanding of simple electricity by combining simulation and laboratory activities. Journal of Computer Assisted Learning, 24(4), 271-283.",
+        studyLink: "https://doi.org/10.1111/j.1365-2729.2007.00259.x",
+        description: "A combined approach where students first used an interactive computer simulation (Electricity Exploration Tool) to learn concepts of simple electricity, then immediately practiced the same concepts with physical laboratory equipment.",
+        fullDescription: "Students in the combination environment used both the Electricity Exploration Tool simulation and physical laboratory equipment kits (batteries, bulbs, wires, switches, multimeter). Students were first asked to complete circuit assignments using the semi-realistic simulation that visualized current flow and allowed easy manipulation of circuit components. After successfully completing each assignment in the simulation, they immediately repeated the same assignment with real laboratory equipment located next to the computer. This approach was designed to help students first discover theoretical principles through the idealized simulation environment, then transfer and verify that these laws apply in real-world circuits, promoting conceptual change by bridging theory and reality.",
+        implementation: "The intervention consisted of two consecutive hours during one session. After a 15-minute general introduction to electricity (identical across all conditions), student pairs worked through 12 worksheets with progressively challenging circuit assignments. In the combination condition, each worksheet was completed first with the simulation, then verified with physical equipment. Worksheets contained instructional questions encouraging attention to circuit configurations and their effects on bulb brightness and voltages. Teachers controlled progression, checking answers before students could advance to the next worksheet.",
+        sample: "22 fourth and fifth grade students (10-11 years old) from one urban Finnish elementary school with no prior formal education on electricity. Students were matched into conditions based on pre-test scores to ensure equal baseline performance across groups.",
+        outcome: "Researcher-developed subject knowledge test with two parts: (1) 40 equation-style computation problems (10 minutes), and (2) 22 word problems requiring calculations and written answers with numbers and units (20 minutes). Scoring awarded points for correct calculations, numbers, and units. Post-test included basic questions (repeated from pre-test) and four additional advanced questions with more complex circuits.",
+        effectSize: "+0.43 SD"
+      },
+      {
+        id: 7,
+        title: "onebillion Interactive Mathematics Apps (Malawi)",
+        study: "Pitchford, N. J. (2015). Development of early mathematical skills with a tablet intervention: a randomized control trial in Malawi. Frontiers in Psychology, 6, Article 485.",
+        studyLink: "https://doi.org/10.3389/fpsyg.2015.00485",
+        description: "Tablet-based mathematics apps designed for low-resource settings, using games and activities aligned with national curriculum to teach number concepts and counting.",
+        fullDescription: "The onebillion suite provided self-directed learning through interactive games and activities aligned with the Malawi national curriculum. The apps included numeracy content from the first three grades, covering counting, number recognition, addition, subtraction, and early multiplication. Each app used culturally familiar visuals, audio narration in local languages (Chichewa), immediate feedback, and adaptive progression. Students worked independently at their own pace using touch-screen tablets in classroom settings, with minimal teacher involvement. The platform was specifically designed for use in low-resource environments with intermittent electricity.",
+        implementation: "The intervention was delivered in two phases. In Phase 1 (May 2013), students used tablets for one full school day (approximately 4 hours). In Phase 2 (July-November 2013), students used the tablets for 30 minutes daily, four days per week over eight weeks, totaling about 16 hours of use. Students worked individually with tablets in their regular classroom settings with minimal teacher supervision.",
+        sample: "357 students from three primary schools in Lilongwe, Malawi. At baseline, mean age was 7.98 years (SD=1.83), with 49.6% female students. Students came from low socioeconomic backgrounds with limited prior educational resources.",
+        outcome: "Early Grade Mathematics Assessment (EGMA) – a standardized test measuring early mathematical abilities including number identification, number discrimination, missing number, addition, subtraction, and word problems. Post-testing occurred immediately after each intervention phase.",
+        effectSize: "+0.59 SD"
+      },
+      {
+        id: 8,
+        title: "Computer-Assisted Instruction (CAI) for Elementary Addition and Subtraction",
+        study: "Burns, M. K., Kanive, R., & DeGrande, M. (2012). Effect of a computer-delivered math fact intervention as a supplemental intervention for math in third and fourth grades. Remedial and Special Education, 33(3), 184–191.",
+        studyLink: "https://doi.org/10.1177/0741932510381652",
+        description: "A web-based program focusing on basic addition and subtraction facts through practice exercises with immediate feedback and progress monitoring.",
+        fullDescription: "The Math Fact Mastery (MFM) program was a web-based supplemental intervention designed to improve computational fluency in basic addition and subtraction. Students worked through sequenced exercises targeting specific fact families, receiving immediate feedback on their responses. The program tracked student progress through a placement test that determined starting levels and adapted practice based on performance. Sessions emphasized timed practice to build automaticity, with students advancing through increasingly complex fact combinations. The intervention was designed as a supplement to core mathematics instruction.",
+        implementation: "Students worked with the MFM program three to four times per week for 10 minutes per session over approximately 10 weeks (28 total sessions on average). Sessions took place during regular school hours in a computer lab or classroom with computers. A paraprofessional supervised the sessions, providing technical assistance but not mathematics instruction. Students completed a placement test at the start, then worked through practice sessions independently with the adaptive software.",
+        sample: "27 third and fourth grade students from one elementary school in the Midwest who scored below the 25th percentile on district math assessments and were receiving Tier 2 interventions. Students were predominantly White (96%) and from lower socioeconomic backgrounds (70% free/reduced lunch).",
+        outcome: "AIMSweb Math Computation (M-COMP) probe – a two-minute timed test of mixed addition and subtraction problems matched to grade level. Students were assessed on digits correct per minute.",
+        effectSize: "+0.42 SD"
+      },
+      {
+        id: 9,
+        title: "ST Math (Spatial-Temporal Mathematics)",
+        study: "Rutherford, T., Farkas, G., Duncan, G., Burchinal, M., Kibrick, M., Graham, J., Richland, L., Tran, N., Schneider, S., Duran, L., & Martinez, M. E. (2014). A randomized trial of an elementary school mathematics software intervention: Spatial-temporal math. Journal of Research on Educational Effectiveness, 7(4), 358–383.",
+        studyLink: "https://doi.org/10.1080/19345747.2013.856795",
+        description: "Game-based software using visual, spatial-temporal representations to teach mathematical concepts with minimal language, featuring an animated penguin character solving puzzles.",
+        fullDescription: "ST Math (Spatial-Temporal Math) is a game-based software program that uses animated visual representations to teach mathematical concepts with minimal language. Students guide an animated penguin character named JiJi through increasingly complex mathematical puzzles that build conceptual understanding through spatial reasoning. The program covers topics including number sense, counting, addition, subtraction, place value, fractions, and measurement. Problems are presented visually first, requiring students to manipulate objects and observe mathematical relationships before being introduced to traditional symbolic notation. The software provides immediate visual feedback, showing students the consequences of their choices. Students must achieve mastery (passing a criterion number of puzzles) before progressing to new content.",
+        implementation: "The intervention was implemented as a supplement to regular mathematics instruction during the school day. Students used ST Math for 60-90 minutes per week across 2-3 sessions, either during dedicated computer lab time or on classroom computers/tablets. Implementation occurred throughout the academic year (approximately 9 months). Teachers monitored student progress through web-based dashboards but students worked independently through the software.",
+        sample: "2,733 students from 30 elementary schools across 12 districts in California. Students were from grades K-2, with diverse demographic backgrounds including 60% Hispanic, 22% White, 7% Asian, and 5% African American students. About 67% qualified for free/reduced lunch.",
+        outcome: "State standardized mathematics assessment (California Standards Test for grades 2-5) administered at the end of the school year.",
+        effectSize: "+0.36 SD"
+      },
+      {
+        id: 10,
+        title: "Fast ForWord Language",
+        study: "Borman, G. D., Benson, J., & Overman, L. T. (2005). Families, Schools, and Summer Learning. The Elementary School Journal, 106(2), 131-150.",
+        studyLink: "https://doi.org/10.1086/496910",
+        description: "Adaptive software targeting phonological awareness and language processing through game-like exercises that adjust difficulty based on student performance.",
+        fullDescription: "Fast ForWord Language is an adaptive computer-based intervention designed to build foundational language and reading skills through intensive practice. The program uses game-like exercises that target phonological awareness, phonemic awareness, and language processing skills. Exercises are acoustically modified to slow down and emphasize speech sounds, helping students better discriminate phonemes. The software continuously adapts difficulty based on student performance, maintaining an appropriate challenge level. Students complete multiple short exercises per session, receiving immediate feedback and earning points for correct responses. The program requires intensive use (90-100 minutes daily) to achieve intended effects.",
+        implementation: "The intervention was delivered during a 6-week summer program, with students using Fast ForWord for 90-100 minutes daily, five days per week. Students worked individually on computers in a supervised setting. Each session was divided into multiple exercise blocks with short breaks between them. Trained staff supervised computer lab sessions to ensure students stayed on task and troubleshoot technical issues, but did not provide direct instruction.",
+        sample: "103 students entering first through fifth grades who participated in a summer learning program in a mid-sized Northeastern city. Students were primarily from low-income families and at risk for summer learning loss. Sample was ethnically diverse with predominantly African American and Hispanic students.",
+        outcome: "Woodcock Reading Mastery Test – Word Attack subtest (measuring phonics and decoding of pseudowords) and Word Identification subtest (measuring sight word recognition). Tests were administered at the beginning and end of the summer program.",
+        effectSize: "+0.41 SD"
+      },
+      {
+        id: 11,
+        title: "Waterford Early Reading Program",
+        study: "Paterson, W. A., Henry, J. J., O'Quin, K., Ceprano, M. A., & Blue, E. V. (2003). Investigating the effectiveness of an integrated learning system on early emergent readers. Reading Research Quarterly, 38(2), 172-207.",
+        studyLink: "https://doi.org/10.1598/RRQ.38.2.2",
+        description: "Comprehensive early literacy software covering phonological awareness, phonics, vocabulary, and comprehension through interactive lessons with speech recognition.",
+        fullDescription: "The Waterford Early Reading Program (WERP) is a comprehensive computer-based literacy curriculum designed for kindergarten through second grade. The program provides individualized instruction across multiple literacy domains including phonological awareness, phonics, sight word recognition, vocabulary, fluency, and comprehension. Lessons incorporate multimedia elements including animation, music, recorded speech, and video. The software uses speech recognition technology to provide feedback on students' oral reading. Students progress through a carefully sequenced curriculum that adapts to their performance, with built-in assessments determining placement and pacing. Activities are game-like and designed to be engaging while building essential reading skills.",
+        implementation: "Students used the Waterford program during the regular school day, typically for 20-30 minutes per session, three to five times per week throughout the school year. Students worked individually on computers in dedicated computer labs or on classroom computers, often rotating through stations. Teachers monitored student progress through management software but students worked independently through the program. Implementation occurred from the beginning to the end of the academic year (approximately 9 months).",
+        sample: "150 kindergarten students from three elementary schools in a suburban school district in the southeastern United States. Students were predominantly from middle-class families, with approximately 30% qualifying for free or reduced-price lunch. The sample was racially diverse, including White, African American, and Hispanic students.",
+        outcome: "Dynamic Indicators of Basic Early Literacy Skills (DIBELS) including Letter Naming Fluency, Initial Sound Fluency, and Phoneme Segmentation Fluency subtests. Students were assessed in fall and spring of the kindergarten year.",
+        effectSize: "+0.38 SD"
+      }
+    ];
+
+    function RemoteEdHub() {
+      const [searchTerm, setSearchTerm] = useState('');
+      const [favorites, setFavorites] = useState([]);
+      const [showFavorites, setShowFavorites] = useState(false);
+      const [selectedIntervention, setSelectedIntervention] = useState(null);
+
+      const toggleFavorite = (id) => {
+        setFavorites(prev =>
+          prev.includes(id)
+            ? prev.filter(favId => favId !== id)
+            : [...prev, id]
+        );
+      };
+
+      const filteredInterventions = interventions.filter(intervention => {
+        const matchesSearch = intervention.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          intervention.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesFavorites = !showFavorites || favorites.includes(intervention.id);
+        return matchesSearch && matchesFavorites;
+      });
+
+      if (selectedIntervention) {
+        const intervention = interventions.find(i => i.id === selectedIntervention);
+        
+        return (
+          <div className="min-h-screen bg-gray-50">
+            <div className="bg-white border-b border-gray-200">
+              <div className="max-w-4xl mx-auto px-6 py-8">
+                <button
+                  onClick={() => setSelectedIntervention(null)}
+                  className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-6 font-medium"
+                >
+                  <ArrowRight className="w-4 h-4 transform rotate-180" />
+                  Back to all interventions
+                </button>
+                <h1 className="text-3xl font-bold text-gray-900 mb-4">{intervention.title}</h1>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm font-medium mb-4">
+                  <TrendingUp className="w-4 h-4" />
+                  Effect Size: {intervention.effectSize}
+                </div>
+              </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto px-6 py-8">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 space-y-8">
+                <section>
+                  <div className="flex items-center gap-2 mb-3">
+                    <BookOpen className="w-5 h-5 text-blue-600" />
+                    <h2 className="text-xl font-semibold text-gray-900">About This Intervention</h2>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">{intervention.fullDescription}</p>
+                </section>
+
+                <section>
+                  <div className="flex items-center gap-2 mb-3">
+                    <FileText className="w-5 h-5 text-blue-600" />
+                    <h2 className="text-xl font-semibold text-gray-900">Implementation Details</h2>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">{intervention.implementation}</p>
+                </section>
+
+                <section>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Users className="w-5 h-5 text-blue-600" />
+                    <h2 className="text-xl font-semibold text-gray-900">Study Sample</h2>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">{intervention.sample}</p>
+                </section>
+
+                <section>
+                  <div className="flex items-center gap-2 mb-3">
+                    <GraduationCap className="w-5 h-5 text-blue-600" />
+                    <h2 className="text-xl font-semibold text-gray-900">Outcome Measure</h2>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">{intervention.outcome}</p>
+                </section>
+
+                <section>
+                  <div className="flex items-center gap-2 mb-3">
+                    <ExternalLink className="w-5 h-5 text-blue-600" />
+                    <h2 className="text-xl font-semibold text-gray-900">Research Study</h2>
+                  </div>
+                  <p className="text-gray-700 mb-3">{intervention.study}</p>
+                  <a
+                    href={intervention.studyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View full study
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </section>
+
+                <div className="pt-4 border-t border-gray-200">
+                  <button
+                    onClick={() => toggleFavorite(intervention.id)}
+                    className={`w-full py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+                      favorites.includes(intervention.id)
+                        ? 'bg-red-100 text-red-700 hover:bg-red-200 border border-red-300'
+                        : 'bg-blue-600 text-white hover:bg-blue-700'
+                    }`}
+                  >
+                    <Heart className={`w-5 h-5 ${favorites.includes(intervention.id) ? 'fill-current' : ''}`} />
+                    {favorites.includes(intervention.id) ? 'Remove from Favorites' : 'Add to Favorites'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <div className="min-h-screen bg-gray-50">
+          <div className="bg-white border-b border-gray-200">
+            <div className="max-w-6xl mx-auto px-6 py-12">
+              <h1 className="text-4xl font-bold text-gray-900 mb-3">Find What Works</h1>
+              <p className="text-lg text-gray-600 max-w-2xl">
+                Explore evidence-based interventions from our meta-analysis. Browse studies that demonstrate positive effects on student achievement.
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-6xl mx-auto px-6 py-8">
+            <div className="mb-8">
+              <div className="relative mb-6">
+                <i data-lucide="search" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                <input
+                  type="text"
+                  placeholder="Search interventions..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              <button
+                onClick={() => setShowFavorites(!showFavorites)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
+                  showFavorites
+                    ? 'bg-red-100 text-red-700 border border-red-300'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                }`}
+              >
+                <i data-lucide="heart" className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`}></i>
+                {showFavorites ? 'Showing Favorites' : 'Show Favorites'} ({favorites.length})
+              </button>
+            </div>
+
+            {filteredInterventions.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-lg">No interventions found. Try adjusting your search.</p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {filteredInterventions.map(intervention => (
+                  <div
+                    key={intervention.id}
+                    className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer border border-gray-200"
+                    onClick={() => setSelectedIntervention(intervention.id)}
+                  >
+                    <div className="p-6">
+                      <div className="flex justify-between items-start mb-3">
+                        <div className="flex-1">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{intervention.title}</h3>
+                          <p className="text-gray-600 mb-3">{intervention.description}</p>
+                          <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
+                            <i data-lucide="trending-up" className="w-4 h-4"></i>
+                            Effect Size: {intervention.effectSize}
+                          </div>
+                        </div>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFavorite(intervention.id);
+                          }}
+                          className="p-2 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0 ml-4"
+                        >
+                          <i data-lucide="heart" className={`w-5 h-5 ${favorites.includes(intervention.id) ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<RemoteEdHub />);
+
+    // Initialize Lucide icons after render
+    lucide.createIcons();
+  </script>
+</body>
+</html>
