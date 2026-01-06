@@ -9,6 +9,52 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+    .fade-in-scale {
+      animation: fadeInScale 0.5s ease-out;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .gradient-bg-subtle {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .btn-hover {
+      transition: all 0.3s ease;
+    }
+    .btn-hover:hover {
+      transform: scale(1.05);
+    }
+    .filter-btn {
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
   <div id="root"></div>
@@ -318,203 +364,6 @@
         }
       }
     ];
-      {
-        id: 36833706,
-        title: "Teacher-Facilitated Math Software for Grade 6",
-        study: "Afzal, M. T., & Gondal, M. B. (2010). Effect of mathematics software facilitated teaching on students learning. The International Journal of Technology, Knowledge and Society, 6(3).",
-        studyLink: "https://doi.org/10.18848/1832-3669/CGP/v06i03/56125",
-        description: "Interactive math software combined with active teacher support, where teachers regularly explain concepts, answer questions, and reinforce learning while students work on computers.",
-        whatItDoes: "This program uses interactive math software alongside active teacher support. Students learn math concepts on the computer, while the teacher regularly steps in to explain ideas, answer questions, and reinforce learning using familiar classroom tools. A lab assistant helps with technical issues so students can stay focused on learning.",
-        howItWasUsed: "Students worked on software-based lessons covering integers, algebra, and geometry. Instruction took place three times per week in a computer lab. Teachers stayed actively involved throughout each session rather than letting students work entirely on their own.",
-        whoItWasTestedWith: "The study included 312 sixth-grade students from four public schools in Punjab Province, Pakistan. Schools represented both urban and rural settings and included boys' and girls' schools.",
-        whatWasMeasured: "Student learning was measured using a math test created by the researchers. The test assessed students' ability to remember, understand, and apply math concepts and included multiple-choice, short-answer, and longer problem-solving questions.",
-        howWellItWorked: "Students who received teacher-facilitated math software instruction performed better on math achievement than students taught with traditional instruction or self-paced computer instruction. The size of the improvement was moderate, with an estimated effect size of 0.50, and a 95% confidence interval from 0.22 to 0.77.",
-        effectSize: "+0.50 SD"
-      },
-      {
-        id: 36834237,
-        title: "Adaptive Arithmetic Practice with Program-Guided Task Selection",
-        study: "Schoppek, W. (2012). Dynamic task selection in learning arithmetic: The role of learner control and adaptation based on a hierarchy of skills. Zeitschrift für Pädagogische Psychologie, 26(1), 43–55.",
-        studyLink: "https://doi.org/10.1024/1010-0652/a000059",
-        description: "Computer-based software that automatically adapts arithmetic practice to students' skill levels, selecting problems based on a structured hierarchy to keep tasks challenging but manageable.",
-        whatItDoes: "Students practiced arithmetic and word problems using computer-based software that adapts practice tasks to students' skill levels. In the program-controlled version, the software automatically selected problems based on a structured hierarchy of arithmetic skills, aiming to keep tasks challenging but manageable. This approach was designed to prevent students from repeatedly practicing problems that were too easy.",
-        howItWasUsed: "Students used the software during regular math instruction over an eight-week period. Practice sessions occurred weekly and lasted one class period. The software provided immediate feedback and guided students through sets of arithmetic and word problems.",
-        whoItWasTestedWith: "The study included 278 third-grade students (ages 8–9) from 13 elementary school classes in Germany, representing both urban and rural schools. Students were assigned to program-controlled software practice, shared-control software practice (where students chose tasks from a menu), or traditional instruction.",
-        whatWasMeasured: "Student performance was measured using researcher-developed tests of arithmetic and word problem solving. The assessments focused on computation accuracy and multi-step problem solving and were administered before instruction, immediately after instruction, and again at follow-up.",
-        howWellItWorked: "Students using the adaptive, program-controlled software showed greater improvement in arithmetic performance than students receiving traditional instruction or using software that allowed students to choose their own problems. The improvement associated with program-controlled task selection was moderate in size, with an estimated effect size of 0.43 and a 95% confidence interval from 0.15 to 0.70.",
-        effectSize: "+0.43 SD"
-      },
-      {
-        id: 36836013,
-        title: "Combining Computer Simulations with Hands-On Science Activities",
-        study: "Jaakkola, T., & Nurmi, S. (2008). Fostering elementary school students' understanding of simple electricity by combining simulation and laboratory activities. Journal of Computer Assisted Learning, 24, 271–283.",
-        studyLink: "https://doi.org/10.1111/j.1365-2729.2007.00259.x",
-        description: "Students learn about electricity using both interactive computer simulations and real laboratory materials, first completing tasks on simulation then repeating with physical equipment.",
-        whatItDoes: "Students learn about basic electricity by using both interactive computer simulations and real laboratory materials. The simulation helps students visualize invisible processes—such as how electric current flows—while the hands-on activities allow them to test those ideas with real batteries, bulbs, and wires. The goal is to help students move beyond common misconceptions and build a deeper, more accurate understanding of electric circuits.",
-        howItWasUsed: "Students worked through a structured set of electricity activities over a short instructional unit. In the combined approach, students first completed each task using a computer simulation and then repeated the same task with real laboratory equipment. Worksheets guided students step by step, prompting them to build circuits, make predictions, observe outcomes, and explain what they learned.",
-        whoItWasTestedWith: "The study involved 66 fourth- and fifth-grade students from one elementary school in Finland. Students had no prior formal instruction in electricity before participating.",
-        whatWasMeasured: "Student learning was measured using tests that assessed understanding of electric circuits, including concepts such as closed circuits, series and parallel configurations, voltage, and bulb brightness. The assessments focused on whether students developed scientifically accurate explanations rather than relying on intuitive but incorrect ideas.",
-        howWellItWorked: "Students who used both simulations and hands-on lab activities showed substantially stronger learning gains than students who used only simulations or only lab equipment. The improvement associated with the combined approach was moderate to large, with an estimated effect size of 0.43 and a 95% confidence interval from 0.08 to 0.77. Students in the combined approach were also much more likely to develop scientifically accurate explanations of how electric circuits work.",
-        effectSize: "+0.43 SD"
-      },
-      {
-        id: 36836006,
-        title: "One Billion Math App (Adaptive Mobile Math Practice)",
-        study: "Pitchford, N. J. (2015). Development of early mathematical skills with a tablet intervention: A randomized control trial in Malawi. Frontiers in Psychology, 6, 485.",
-        studyLink: "https://doi.org/10.3389/fpsyg.2015.00485",
-        description: "Tablet-based mathematics program with short, interactive games that adapt to student performance, building foundational numeracy skills through immediate feedback.",
-        whatItDoes: "The One Billion Math app is a tablet-based mathematics program designed to build foundational numeracy skills through short, interactive games. The app adapts to each student's performance, automatically adjusting difficulty and providing immediate feedback. Activities focus on core early math skills such as number recognition, counting, basic operations, and problem solving.",
-        howItWasUsed: "Students used the One Billion Math app independently on tablets during regular school time. Sessions were short and frequent, allowing students to progress at their own pace. The app required minimal teacher instruction, making it feasible in classrooms with limited instructional resources.",
-        whoItWasTestedWith: "The study included 318 students in the first year of primary school in Malawi. Many students had limited prior exposure to formal mathematics instruction and little or no prior experience with digital learning tools.",
-        whatWasMeasured: "Student learning was measured using standardized assessments of early mathematics skills, including number knowledge, counting, and basic arithmetic. Assessments were administered before and after the intervention period.",
-        howWellItWorked: "Students who used the One Billion Math app showed meaningful improvements in early math achievement compared to students receiving regular classroom instruction. The size of the improvement was moderate, with an estimated effect size of 0.42 and a 95% confidence interval from 0.24 to 0.61.",
-        effectSize: "+0.42 SD"
-      },
-      {
-        id: 36438171,
-        title: "Intelligent Tutoring System for Middle School Mathematics",
-        study: "Koedinger, K. R., Anderson, J. R., Hadley, W. H., & Mark, M. A. (1997). Intelligent tutoring goes to school in the big city. International Journal of Artificial Intelligence in Education, 8, 30–43.",
-        studyLink: "https://www.semanticscholar.org/paper/36438171",
-        description: "Step-by-step algebra tutoring system that provides immediate feedback, adapts to student responses, and mirrors one-on-one tutoring by prompting through problem-solving steps.",
-        whatItDoes: "The program is an intelligent tutoring system designed to support students as they learn algebra. It provides step-by-step guidance while students solve problems, gives immediate feedback when errors occur, and adapts instruction based on each student's responses. The system is designed to mirror one-on-one tutoring by prompting students through problem-solving steps rather than simply giving answers.",
-        howItWasUsed: "Students used the tutoring software during regular math class time as part of their algebra instruction. The software guided students through practice problems, monitored their progress in real time, and adjusted instruction to address individual misunderstandings. Teachers integrated the system into existing classroom routines rather than replacing instruction entirely.",
-        whoItWasTestedWith: "The study included middle school students enrolled in algebra courses in an urban school district in the United States. The sample included students from multiple classrooms serving diverse student populations.",
-        whatWasMeasured: "Student learning was measured using assessments of algebra problem-solving and procedural knowledge aligned with the instructional content covered during the intervention.",
-        howWellItWorked: "Students who used the intelligent tutoring system demonstrated higher mathematics achievement than students receiving traditional instruction alone. The size of the improvement was moderate, with an estimated effect size of 0.41 and a 95% confidence interval from 0.30 to 0.53.",
-        effectSize: "+0.41 SD"
-      },
-      {
-        id: 36834226,
-        title: "Online Laboratory Simulations and Serious Educational Games for Science",
-        study: "Lamb, R. L. (2016). Examination of the effects of dimensionality on cognitive processing in science: A computational modeling experiment comparing online laboratory simulations and serious educational games. Journal of Science Education and Technology, 25, 1–15.",
-        studyLink: "https://doi.org/10.1007/s10956-015-9580-2",
-        description: "Two-dimensional online lab simulations and three-dimensional serious educational games for high school science, allowing students to interact with biological processes in digital environments.",
-        whatItDoes: "This study compares two technology-based instructional approaches—two-dimensional online laboratory simulations and three-dimensional serious educational games—with traditional lecture-based instruction. Both technology conditions aim to improve students' science content understanding by allowing them to interact with representations of biological processes, while the three-dimensional games additionally immerse students in spatially rich, problem-based environments.",
-        howItWasUsed: "The study used a block-randomized pretest–posttest design across intact high school classes. Students participated in one of three conditions over an 8-week instructional period: a two-dimensional online lab simulation, a three-dimensional serious educational game, or traditional lecture-based instruction. Teachers' roles were minimized in the technology conditions, with instruction largely embedded within the digital environments.",
-        whoItWasTestedWith: "Participants were 11th- and 12th-grade high school students (N = 551) from U.S. secondary schools. Stratified random sampling was used to create balanced groups across instructional conditions.",
-        whatWasMeasured: "Primary outcomes included science content achievement, measured using a criterion-referenced test drawn from released state science exam items focused on biotechnology concepts (e.g., DNA base-pair identification and polymerase chain reaction).",
-        howWellItWorked: "Technology-based instruction produced moderate, statistically significant improvements in science achievement compared with traditional instruction. The estimated effect size was g ≈ 0.40, with a 95% confidence interval of [0.17, 0.63], indicating a reliable positive effect. Results favored both online simulations and serious educational games, with the strongest gains observed for three-dimensional game-based instruction.",
-        effectSize: "+0.40 SD"
-      },
-      {
-        id: 36440669,
-        title: "Computer-Aided Instruction for Pre-Algebra and Algebra (I Can Learn®)",
-        study: "Barrow, L., Markman, L., & Rouse, C. E. (2009). Technology's edge: The educational benefits of computer-aided instruction. American Economic Journal: Economic Policy, 1(1), 52–74.",
-        studyLink: "https://doi.org/10.1257/pol.1.1.52",
-        description: "Self-paced computer program guiding students through pre-algebra and algebra with explanations, worked examples, practice opportunities, and immediate feedback.",
-        whatItDoes: "I Can Learn® is a computer-based mathematics program designed to support students in pre-algebra and algebra through structured, self-paced instruction. The software guides students step by step through math problems, providing explanations, worked examples, practice opportunities, and immediate feedback. The focus is on building strong procedural fluency in algebra while ensuring students receive consistent instruction aligned to course content.",
-        howItWasUsed: "Students used I Can Learn® during regular school hours in computer lab settings. The program replaced part of traditional classroom instruction rather than serving only as a supplement. Students worked with the software multiple times per week—often across an academic year—during scheduled math periods, with teachers and lab aides present to supervise, monitor progress, and provide support when needed.",
-        whoItWasTestedWith: "The study included middle school and high school students enrolled in pre-algebra and algebra courses in large urban school districts in the United States. Schools primarily served low-income student populations, and students entered the study with a wide range of prior math achievement levels.",
-        whatWasMeasured: "Student learning was measured using mathematics achievement outcomes, including algebra-focused standardized assessments, district benchmark exams, and course-aligned achievement tests.",
-        howWellItWorked: "Students who received instruction using I Can Learn® showed meaningful improvements in mathematics achievement compared to students receiving traditional instruction alone. The improvement was moderate in size, with an estimated effect size of 0.36 and a 95% confidence interval from 0.21 to 0.51, indicating that the gains were statistically reliable and unlikely to be due to chance.",
-        effectSize: "+0.36 SD"
-      },
-      {
-        id: 36440603,
-        title: "In-Home Online Computer-Assisted Learning for Remedial Mathematics",
-        study: "Tang, B., Ting, T.-T., Wu, C.-I., Ma, Y., Mo, D., Hung, W.-T., & Rozelle, S. (2020). The impact of online computer assisted learning at home for disadvantaged children in Taiwan: Evidence from a randomized experiment. Sustainability, 12, 10092.",
-        studyLink: "https://doi.org/10.3390/su122310092",
-        description: "Online, game-based computer-assisted learning for mathematics that students complete at home, offering structured remedial practice aligned with school curriculum.",
-        whatItDoes: "This intervention provides online, game-based computer-assisted learning for mathematics that students complete at home, outside of regular school hours. The program is designed to offer structured, remedial practice aligned with the school curriculum, targeting foundational math skills for disadvantaged students who lack access to tutoring or other learning supports.",
-        howItWasUsed: "Students assigned to the treatment group were asked to complete weekly 60-minute online CAL sessions at home over one or two semesters. The software delivered standardized math exercises and immediate feedback, while teachers' involvement was limited to technical support and reminders, with no direct instructional assistance during sessions.",
-        whoItWasTestedWith: "The study included fourth- and fifth-grade students from 84 rural schools in Taiwan, serving predominantly Yuanzhumin (Indigenous) students. Schools were randomly assigned to treatment or control conditions, and analyses focused on students with home internet access.",
-        whatWasMeasured: "Primary outcomes included mathematics achievement, measured using standardized math tests administered at baseline, midline, and endline.",
-        howWellItWorked: "Students offered in-home CAL demonstrated moderate, statistically significant improvements in math achievement relative to control students. The pooled effect size was g ≈ 0.36, with a 95% confidence interval of [0.21, 0.51], indicating a reliable positive impact. Effects were larger among students who consistently engaged with the program, though the estimate summarized here reflects overall program impacts.",
-        effectSize: "+0.36 SD"
-      },
-      {
-        id: 36438334,
-        title: "Computer-Assisted Instruction for Learning Multiplication",
-        study: "Chang, K.-E., Sung, Y.-T., Chen, Y.-L., & Huang, L.-H. (2008). Learning multiplication through computer-assisted learning activities. Computers in Human Behavior, 24, 2904–2916.",
-        studyLink: "https://doi.org/10.1016/j.chb.2008.04.014",
-        description: "Visual, game-like activities combining conceptual understanding of multiplication with procedural practice, using grouping, comparison, and arrays before emphasizing fact fluency.",
-        whatItDoes: "This computer-assisted learning (CAL) program is designed to help young students learn multiplication by combining conceptual understanding (what multiplication means) with procedural practice (how to compute multiplication facts). Rather than focusing only on memorization, the program uses visual, game-like activities to help students understand multiplication as grouping, comparison, and arrays before emphasizing speed and accuracy with facts.",
-        howItWasUsed: "Students participated in a structured sequence of eight computer-based activities organized into three stages: (1) understanding basic multiplication concepts, (2) learning the meaning and properties of multiplication (such as commutativity), and (3) practicing multiplication facts. All students received the same classroom instruction, after which the intervention group used the computer activities while the comparison group worked with traditional written materials. The intervention took place over approximately three weeks, with repeated, guided practice during regular instructional time.",
-        whoItWasTestedWith: "The study included second-grade students (approximately 8 years old) from an elementary school in Taipei, Taiwan. Students had little to no prior formal instruction in multiplication, and the sample included learners with a wide range of initial math knowledge.",
-        whatWasMeasured: "Student learning was assessed using researcher-developed tests covering basic multiplication concepts (e.g., equal groups, arrays), understanding of the meaning and properties of multiplication, and multiplication-related computation skills. An overall multiplication achievement score was also examined.",
-        howWellItWorked: "Overall, students who used the computer-assisted learning activities demonstrated moderate improvements in multiplication learning compared to students using traditional materials. The estimated effect size was approximately 0.35, with a 95% confidence interval of [0.05, 0.65], indicating a statistically reliable positive effect. Gains were strongest for students with lower prior knowledge, particularly in understanding multiplication concepts and properties. The program was less effective for improving computation speed and accuracy over the short instructional period.",
-        effectSize: "+0.35 SD"
-      },
-      {
-        id: 36438167,
-        title: "Tutorial and Edutainment Software for Teaching Cell Division",
-        study: "Kara, Y., & Yeşilyurt, S. (2008). Comparing the impacts of tutorial and edutainment software programs on students' achievements, misconceptions, and attitudes towards biology. Journal of Science Education and Technology, 17, 32–41.",
-        studyLink: "https://doi.org/10.1007/s10956-007-9087-7",
-        description: "Computer-assisted instructional software teaching cell division through either step-by-step tutorial presentations or game-like edutainment environments with narrative engagement.",
-        whatItDoes: "This approach uses computer-assisted instructional software to teach the biology topic of cell division (mitosis and meiosis). Two types of software were examined: Tutorial software, which presents information step by step using text, animations, diagrams, and feedback, and Edutainment software, which embeds biology content within a game-like, narrative environment designed to engage students emotionally and visually. Both approaches aim to improve students' conceptual understanding, reduce common misconceptions, and support learning beyond traditional lecture-based instruction.",
-        howItWasUsed: "Instruction took place during regular biology lessons over four class periods (45 minutes each). Students in the experimental groups worked individually in a computer lab using the instructional software, following teacher introductions but receiving minimal direct guidance during use. The tutorial group used a structured CD-ROM–based biology program, while the edutainment group used a role-playing science adventure game focused on solving biology-related problems. A control group received traditional lecture-based instruction.",
-        whoItWasTestedWith: "The study included 72 ninth-grade students (ages 14–15) from a public secondary school in Turkey. Students were randomly assigned to a tutorial software group, an edutainment software group, or a traditional instruction control group. All students were computer literate but had no prior experience using computer-assisted instruction for biology.",
-        whatWasMeasured: "Student outcomes included biology achievement related to cell division (researcher-developed achievement test), conceptual understanding and misconceptions about mitosis and meiosis (concept test), and attitudes toward biology (biology attitude scale).",
-        howWellItWorked: "Students who used instructional software demonstrated stronger biology achievement than students receiving traditional instruction. The overall improvement associated with computer-assisted instruction was moderate in size, with an estimated effect size of 0.35 and a 95% confidence interval from 0.05 to 0.65, indicating a statistically reliable positive effect. Both tutorial and edutainment software helped reduce misconceptions, while the edutainment software was particularly effective at improving students' attitudes toward biology.",
-        effectSize: "+0.35 SD"
-      },
-      {
-        id: 36438533,
-        title: "Live Interactive Satellite-Based Instruction for Rural Schools",
-        study: "Johnston, J., & Ksoll, C. (2022). Effectiveness of interactive satellite-transmitted instruction: Experimental evidence from Ghanaian primary schools. Economics of Education Review, 91, 102315.",
-        studyLink: "https://doi.org/10.1016/j.econedurev.2022.102315",
-        description: "Real-time, two-way video instruction from expert teachers delivered via satellite to multiple rural classrooms, focusing on foundational literacy and numeracy.",
-        whatItDoes: "This program delivers real-time, two-way video instruction from expert teachers in a central studio to multiple rural classrooms simultaneously using satellite technology. Classroom facilitators support students locally while instruction focuses on basic literacy and numeracy skills aligned with students' learning levels.",
-        howItWasUsed: "The intervention was implemented as a cluster randomized controlled trial in rural Ghanaian primary schools. Students received approximately two hours per day of live satellite instruction, integrated into the regular school schedule, with instruction adjusted over time to better match student ability levels.",
-        whoItWasTestedWith: "The study included primary school students in grades 2–5 from low-income, rural communities with limited access to trained teachers. Analyses focused on students exposed to the program for one or two full academic years.",
-        whatWasMeasured: "Student outcomes were assessed using standardized early-grade measures of numeracy (e.g., number recognition, basic operations) and literacy (e.g., letter recognition, phonics, reading fluency).",
-        howWellItWorked: "Students receiving satellite-based instruction demonstrated moderate, statistically significant learning gains compared with control students. The pooled effect size was g ≈ 0.34, with a 95% confidence interval of [0.25, 0.42], indicating a reliable positive impact on foundational academic skills.",
-        effectSize: "+0.34 SD"
-      },
-      {
-        id: 36439801,
-        title: "Virtual Versus Physical Inquiry-Based Chemistry Labs",
-        study: "Pyatt, K., & Sims, R. (2012). Virtual and physical experimentation in inquiry-based science labs: Attitudes, performance and access. Journal of Science Education and Technology, 21, 133–147.",
-        studyLink: "https://doi.org/10.1007/s10956-011-9291-6",
-        description: "Computer-simulated chemistry labs compared with traditional hands-on physical labs, both using inquiry-based instructional frameworks for stoichiometry investigations.",
-        whatItDoes: "This approach compares computer-simulated (virtual) chemistry labs with traditional hands-on physical labs within an inquiry-based instructional framework. Virtual labs allow students to conduct experiments, manipulate variables, and analyze data using simulations that mirror real laboratory procedures, with the goal of supporting conceptual understanding and increasing access to laboratory experiences.",
-        howItWasUsed: "The study employed an experimental crossover design in first-year high school chemistry classes. Students completed two stoichiometry laboratory investigations, experiencing both virtual and physical lab formats across trials. Instructional content, procedures, and assessments were held constant, with the instructional medium (virtual vs. physical) as the key difference.",
-        whoItWasTestedWith: "Participants were 184 first-year secondary chemistry students from a suburban U.S. public high school. All students experienced both virtual and physical lab conditions over the two-year study period.",
-        whatWasMeasured: "Outcomes included student performance on post-lab assessments measuring data interpretation, hypothesis formulation, and conceptual understanding, and student attitudes toward lab usefulness, equipment usability, and open-endedness (measured via a researcher-developed questionnaire).",
-        howWellItWorked: "Across outcomes, virtual and physical labs produced small-to-moderate positive effects on student learning. The pooled effect size was g ≈ 0.30, with a 95% confidence interval of [0.01, 0.59], indicating a modest but statistically reliable advantage associated with virtual inquiry-based laboratory experiences.",
-        effectSize: "+0.30 SD"
-      },
-      {
-        id: 36438159,
-        title: "Student–Teacher–Scientist Partnership with Online Mentoring",
-        study: "Taylor, J. A., Adams, C. T., Westbrook, A. L., Creasap Gee, J., Spybrook, J. K., Kowalski, S. M., Gardner, A. L., & Bloom, M. (2022). The effect of a student–teacher–scientist partnership program on high school students' science achievement and attitudes about scientists. Journal of Research in Science Teaching, 59(3), 423–457.",
-        studyLink: "https://doi.org/10.1002/tea.21730",
-        description: "Project-based biology instruction integrated with asynchronous online mentoring from professional scientists, focusing on photosynthesis and respiration investigations.",
-        whatItDoes: "This program integrates project-based biology instruction with asynchronous online mentoring from professional scientists, aiming to deepen students' understanding of photosynthesis and respiration while increasing engagement with authentic scientific practices.",
-        howItWasUsed: "Teachers implemented the PlantingScience Power of Sunlight module during regular instruction. Students worked in small teams to conduct guided and student-designed investigations and communicated online with scientist mentors who provided feedback on research questions, methods, and interpretations.",
-        whoItWasTestedWith: "The study involved U.S. high school biology students taught by teachers who were randomly assigned to either the partnership program or business-as-usual instruction. The sample was demographically similar to the national population of high schools.",
-        whatWasMeasured: "Primary outcomes included science achievement focused on photosynthesis and cellular respiration.",
-        howWellItWorked: "Students in the partnership program showed small but statistically significant gains in science achievement compared to business-as-usual instruction. The estimated effect size was g ≈ 0.21, with a 95% confidence interval of [0.03, 0.39], indicating a positive and reliable effect.",
-        effectSize: "+0.21 SD"
-      },
-      {
-        id: 36439562,
-        title: "Computer-Assisted Learning for Remedial Math with Long-Term Follow-Up",
-        study: "Mo, D., Zhang, L., Wang, J., Huang, W., Shi, Y., Boswell, M., & Rozelle, S. (2015). Persistence of learning gains from computer assisted learning: Experimental evidence from China. Journal of Computer Assisted Learning.",
-        studyLink: "https://doi.org/10.1111/jcal.12125",
-        description: "Game-based computer-assisted learning software providing structured remedial mathematics practice with emphasis on sustaining learning gains over time.",
-        whatItDoes: "This intervention uses game-based computer-assisted learning software to provide structured, remedial mathematics practice aligned with the national curriculum. The software delivers animated lessons, guided practice, and immediate feedback, aiming to strengthen foundational math skills and sustain learning over time rather than producing only short-term gains.",
-        howItWasUsed: "The CAL program was implemented as a school-level randomized controlled trial in rural China. Boarding students participated in two 40-minute CAL sessions per week, held outside regular class time, over three consecutive semesters (1.5 years). Teacher involvement was limited to supervision and technical support, with no direct math instruction during CAL sessions.",
-        whoItWasTestedWith: "The study included 2,741 third- and fifth-grade boarding students from 72 rural elementary schools in Shaanxi Province, China. Schools were randomly assigned to treatment or control conditions, and analyses focused on academically vulnerable rural students.",
-        whatWasMeasured: "Primary outcomes included mathematics achievement, measured using standardized math tests administered at baseline and follow-up waves over the 1.5-year period.",
-        howWellItWorked: "Students offered CAL showed small but statistically reliable improvements in math achievement relative to control students. The pooled effect size was g ≈ 0.21, with a 95% confidence interval of [0.03, 0.39], indicating a positive and persistent effect. Results suggest that learning gains from CAL were sustained over time rather than fading after initial exposure.",
-        effectSize: "+0.21 SD"
-      },
-      {
-        id: 36439629,
-        title: "Online Algebra I Course for Middle School Students",
-        study: "Heppen, J. B., Allensworth, E., Walters, K., Rickles, J., Taylor, S. S., & Sorensen, N. (2012). Access to Algebra I: The effects of online mathematics for grade 8 students. National Center for Education Evaluation and Regional Assistance (NCEE).",
-        studyLink: "https://ies.ed.gov/ncee/pubs/20134005/",
-        description: "Online Algebra I course for algebra-ready eighth-graders attending schools without in-person Algebra I, supported by on-site facilitators.",
-        whatItDoes: "This intervention provides an online Algebra I course to eighth-grade students who are academically ready for algebra but attend middle schools that do not typically offer Algebra I. The goal is to broaden access to advanced mathematics coursework using online delivery rather than traditional in-person instruction.",
-        howItWasUsed: "The study used a cluster randomized controlled trial, with schools randomly assigned to offer the online Algebra I course or continue with business-as-usual mathematics instruction. Students in treatment schools took Algebra I online during the regular school day, supported by on-site facilitators, while control students remained in their standard math courses.",
-        whoItWasTestedWith: "Participants were algebra-ready eighth-grade students from U.S. middle schools that lacked in-person Algebra I offerings. The analytic sample included students from 68 schools across multiple districts.",
-        whatWasMeasured: "Primary outcomes included algebra achievement, measured using a standardized Algebra I posttest. Secondary outcomes included general mathematics achievement and subsequent high school coursetaking.",
-        howWellItWorked: "Students offered online Algebra I showed small but statistically significant gains in mathematics achievement compared with students in business-as-usual instruction. The pooled effect size was g ≈ 0.18, with a 95% confidence interval of [0.03, 0.33], indicating a modest positive impact. The authors note that effects reflect increased access to Algebra I and cannot be fully separated from the online mode of instruction.",
-        effectSize: "+0.18 SD"
-      }
-    ];
-
     function RemoteEdHub() {
       const [currentPage, setCurrentPage] = useState('landing');
       const [searchTerm, setSearchTerm] = useState('');
@@ -577,18 +426,22 @@
       // Landing Page
       if (currentPage === 'landing') {
         return (
-          <div className="min-h-screen bg-gray-50">
-            <div className="max-w-4xl mx-auto px-6 py-20">
-              <div className="text-center mb-16">
-                <h1 className="text-5xl font-bold text-gray-900 mb-4">
-                  What Works in Remote Math and Science Education
+          <div className="min-h-screen gradient-bg relative overflow-hidden">
+            {/* Decorative circles */}
+            <div className="absolute top-20 left-10 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
+            
+            <div className="max-w-5xl mx-auto px-6 py-20 relative z-10">
+              <div className="text-center mb-16 fade-in">
+                <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                  What Works in Remote<br/>Math & Science Education
                 </h1>
-                <p className="text-2xl text-gray-600">
+                <p className="text-2xl md:text-3xl text-white opacity-90 mb-12">
                   Findings from a Meta-Analysis
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg shadow-lg p-10 mb-8">
+              <div className="glass rounded-2xl p-10 mb-8 fade-in-scale">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
                 
                 <div className="space-y-4 text-gray-700">
@@ -621,7 +474,7 @@
                   <div className="flex flex-col sm:flex-row gap-4 mt-8">
                     <button
                       onClick={() => setCurrentPage('interventions')}
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
+                      className="btn-hover flex items-center justify-center gap-2 px-8 py-4 bg-white text-purple-700 rounded-xl hover:bg-opacity-90 transition-all font-semibold text-lg shadow-xl"
                     >
                       Find What Works
                       <i data-lucide="arrow-right" className="w-5 h-5"></i>
@@ -629,7 +482,7 @@
                     
                     <button
                       onClick={() => setCurrentPage('resources')}
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium text-lg"
+                      className="btn-hover flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-purple-700 transition-all font-semibold text-lg"
                     >
                       <i data-lucide="file-text" className="w-5 h-5"></i>
                       Resources
@@ -755,26 +608,26 @@
                 ← Back to interventions
               </button>
               
-              <div className="bg-white rounded-lg shadow-sm p-8">
+              <div className="glass rounded-2xl shadow-2xl p-10">
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex-1">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-4">{intervention.title}</h1>
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className={`px-4 py-2 rounded-lg font-semibold flex items-center gap-2 ${
+                    <h1 className="text-4xl font-bold text-gray-900 mb-6">{intervention.title}</h1>
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className={`px-6 py-3 rounded-xl font-bold flex items-center gap-3 shadow-xl text-white ${
                         intervention.effectLabel === 'Large Effect'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-blue-100 text-blue-800'
+                          ? 'bg-gradient-to-r from-green-400 to-emerald-500'
+                          : 'bg-gradient-to-r from-blue-400 to-cyan-500'
                       }`}>
-                        <i data-lucide="trending-up" className="w-5 h-5"></i>
+                        <i data-lucide="trending-up" className="w-6 h-6"></i>
                         {intervention.effectLabel}: {intervention.effectSize}
                       </div>
                     </div>
                   </div>
                   <button
                     onClick={() => toggleFavorite(intervention.id)}
-                    className="p-2 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0"
+                    className="p-3 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0"
                   >
-                    <i data-lucide="heart" className={`w-6 h-6 ${favorites.includes(intervention.id) ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}></i>
+                    <i data-lucide="heart" className={`w-7 h-7 ${favorites.includes(intervention.id) ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}></i>
                   </button>
                 </div>
 
@@ -854,28 +707,28 @@
 
       // Interventions Listing Page
       return (
-        <div className="min-h-screen bg-gray-50">
-          <div className="bg-white border-b border-gray-200">
+        <div className="min-h-screen gradient-bg-subtle">
+          <div className="glass border-b border-white">
             <div className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
               <button
                 onClick={() => setCurrentPage('landing')}
-                className="text-gray-600 hover:text-gray-700 transition-colors"
+                className="text-gray-600 hover:text-gray-700 transition-colors font-medium"
               >
                 Home
               </button>
               <button
                 onClick={() => setCurrentPage('resources')}
-                className="text-gray-600 hover:text-gray-700 transition-colors"
+                className="text-gray-600 hover:text-gray-700 transition-colors font-medium"
               >
                 Resources
               </button>
             </div>
           </div>
 
-          <div className="bg-white border-b border-gray-200">
-            <div className="max-w-6xl mx-auto px-6 py-12">
-              <h1 className="text-4xl font-bold text-gray-900 mb-3">Find What Works</h1>
-              <p className="text-lg text-gray-600 max-w-2xl">
+          <div className="glass border-b border-white">
+            <div className="max-w-6xl mx-auto px-6 py-12 fade-in">
+              <h1 className="text-5xl font-bold text-gray-900 mb-3">Find What Works</h1>
+              <p className="text-xl text-gray-600 max-w-2xl">
                 Explore evidence-based interventions from our meta-analysis. Browse studies that demonstrate positive effects on student achievement.
               </p>
             </div>
@@ -898,10 +751,10 @@
                 <div className="flex flex-wrap gap-3">
                   <button
                     onClick={() => setShowFavorites(!showFavorites)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
+                    className={`filter-btn px-4 py-2 rounded-xl font-medium transition-all flex items-center gap-2 shadow-sm ${
                       showFavorites
-                        ? 'bg-red-100 text-red-700 border border-red-300'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                        ? 'bg-gradient-to-r from-red-400 to-pink-500 text-white shadow-lg'
+                        : 'glass text-gray-700 hover:shadow-md'
                     }`}
                   >
                     <i data-lucide="heart" className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`}></i>
@@ -911,7 +764,7 @@
                   {hasActiveFilters() && (
                     <button
                       onClick={clearAllFilters}
-                      className="px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300"
+                      className="filter-btn px-4 py-2 rounded-xl font-medium transition-all flex items-center gap-2 glass hover:shadow-md text-gray-700"
                     >
                       <i data-lucide="x" className="w-4 h-4"></i>
                       Clear Filters
@@ -927,10 +780,10 @@
                         <button
                           key={grade}
                           onClick={() => toggleFilter('gradeLevel', grade)}
-                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                          className={`filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all shadow-sm ${
                             selectedFilters.gradeLevel.includes(grade)
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                              ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
+                              : 'glass text-gray-700 hover:shadow-md'
                           }`}
                         >
                           {grade}
@@ -946,10 +799,10 @@
                         <button
                           key={subject}
                           onClick={() => toggleFilter('subject', subject)}
-                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                          className={`filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all shadow-sm ${
                             selectedFilters.subject.includes(subject)
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                              ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg'
+                              : 'glass text-gray-700 hover:shadow-md'
                           }`}
                         >
                           {subject}
@@ -965,10 +818,10 @@
                         <button
                           key={mode}
                           onClick={() => toggleFilter('deliveryMode', mode)}
-                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                          className={`filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all shadow-sm ${
                             selectedFilters.deliveryMode.includes(mode)
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                              ? 'bg-gradient-to-r from-orange-400 to-red-500 text-white shadow-lg'
+                              : 'glass text-gray-700 hover:shadow-md'
                           }`}
                         >
                           {mode}
@@ -984,10 +837,10 @@
                         <button
                           key={approach}
                           onClick={() => toggleFilter('instructionalApproach', approach)}
-                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                          className={`filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all shadow-sm ${
                             selectedFilters.instructionalApproach.includes(approach)
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                              ? 'bg-gradient-to-r from-green-400 to-teal-500 text-white shadow-lg'
+                              : 'glass text-gray-700 hover:shadow-md'
                           }`}
                         >
                           {approach}
@@ -1004,24 +857,45 @@
                 <p className="text-gray-500 text-lg">No interventions found. Try adjusting your search.</p>
               </div>
             ) : (
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {filteredInterventions.map(intervention => (
                   <div
                     key={intervention.id}
-                    className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer border border-gray-200"
+                    className="glass rounded-2xl shadow-lg hover:shadow-2xl card-hover cursor-pointer border border-white"
                     onClick={() => setSelectedIntervention(intervention.id)}
                   >
-                    <div className="p-6">
-                      <div className="flex justify-between items-start mb-3">
+                    <div className="p-8">
+                      <div className="flex justify-between items-start mb-4">
                         <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{intervention.title}</h3>
-                          <p className="text-gray-600 mb-3">{intervention.description}</p>
-                          <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-lg text-sm font-medium ${
+                          <h3 className="text-2xl font-bold text-gray-900 mb-3">{intervention.title}</h3>
+                          <p className="text-gray-600 mb-4 text-lg leading-relaxed">{intervention.description}</p>
+                          
+                          {/* Tags */}
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {intervention.tags.gradeLevel.map(tag => (
+                              <span key={tag} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                                {tag}
+                              </span>
+                            ))}
+                            {intervention.tags.subject.map(tag => (
+                              <span key={tag} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                                {tag}
+                              </span>
+                            ))}
+                            {intervention.tags.deliveryMode.map(tag => (
+                              <span key={tag} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                          
+                          {/* Effect Size Badge with Gradient */}
+                          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold shadow-lg text-white ${
                             intervention.effectLabel === 'Large Effect' 
-                              ? 'bg-green-100 text-green-800' 
-                              : 'bg-blue-100 text-blue-800'
+                              ? 'bg-gradient-to-r from-green-400 to-emerald-500' 
+                              : 'bg-gradient-to-r from-blue-400 to-cyan-500'
                           }`}>
-                            <i data-lucide="trending-up" className="w-4 h-4"></i>
+                            <i data-lucide="trending-up" className="w-5 h-5"></i>
                             {intervention.effectLabel}: {intervention.effectSize}
                           </div>
                         </div>
@@ -1030,9 +904,9 @@
                             e.stopPropagation();
                             toggleFavorite(intervention.id);
                           }}
-                          className="p-2 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0 ml-4"
+                          className="p-3 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0 ml-4"
                         >
-                          <i data-lucide="heart" className={`w-5 h-5 ${favorites.includes(intervention.id) ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}></i>
+                          <i data-lucide="heart" className={`w-6 h-6 ${favorites.includes(intervention.id) ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}></i>
                         </button>
                       </div>
                     </div>
