@@ -81,7 +81,7 @@
   <div id="root"></div>
 
   <script type="text/babel">
-    const { useState } = React;
+    const { useState, useEffect } = React;
 
     const interventions = [
       {
@@ -433,6 +433,11 @@
         instructionalApproach: [],
         country: []
       });
+
+      // Initialize icons whenever the page or selected intervention changes
+      useEffect(() => {
+        lucide.createIcons();
+      }, [currentPage, selectedIntervention]);
 
       const toggleFilter = (category, value) => {
         setSelectedFilters(prev => {
@@ -1190,16 +1195,6 @@
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<RemoteEdHub />);
-
-    // Initialize Lucide icons and re-initialize on any changes
-    setTimeout(() => {
-      lucide.createIcons();
-    }, 100);
-    
-    // Re-initialize icons whenever the DOM updates
-    setInterval(() => {
-      lucide.createIcons();
-    }, 500);
   </script>
 </body>
 </html>
