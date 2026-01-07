@@ -507,7 +507,10 @@
                 {/* Find What Works Button */}
                 <div className="relative group">
                   <button
-                    onClick={() => setCurrentPage('interventions')}
+                    onClick={() => {
+                      setSelectedIntervention(null);
+                      setCurrentPage('interventions');
+                    }}
                     className="btn-hover px-10 py-5 bg-white text-emerald-700 rounded-xl hover:bg-opacity-90 transition-all font-bold text-xl shadow-2xl"
                   >
                     Find What Works →
@@ -533,7 +536,10 @@
                 {/* Project Overview Button - NOW 2ND */}
                 <div className="relative group">
                   <button
-                    onClick={() => setCurrentPage('overview')}
+                    onClick={() => {
+                      setSelectedIntervention(null);
+                      setCurrentPage('overview');
+                    }}
                     className="btn-hover px-10 py-5 bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-emerald-700 transition-all font-bold text-xl shadow-xl"
                   >
                     Project Overview
@@ -557,7 +563,10 @@
                 {/* Resources Button - NOW 3RD */}
                 <div className="relative group">
                   <button
-                    onClick={() => setCurrentPage('resources')}
+                    onClick={() => {
+                      setSelectedIntervention(null);
+                      setCurrentPage('resources');
+                    }}
                     className="btn-hover px-10 py-5 bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-emerald-700 transition-all font-bold text-xl shadow-xl"
                   >
                     Resources
@@ -797,7 +806,7 @@
       }
 
       // Individual Intervention Detail Page
-      if (selectedIntervention) {
+      if (selectedIntervention && currentPage === 'interventions') {
         const intervention = interventions.find(i => i.id === selectedIntervention);
         return (
           <div className="min-h-screen gradient-bg-interventions relative overflow-hidden">
@@ -945,28 +954,18 @@
           {/* Header */}
           <div className="relative z-10 border-b border-white/20 bg-black/10 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto px-6 py-8">
-              <div className="text-center mb-6">
-                <div className="flex justify-center gap-6 mb-6">
-                  <button
-                    onClick={() => setCurrentPage('landing')}
-                    className="text-white/80 hover:text-white transition-colors font-semibold"
-                  >
-                    Home
-                  </button>
-                  <button
-                    onClick={() => setCurrentPage('overview')}
-                    className="text-white/80 hover:text-white transition-colors font-semibold"
-                  >
-                    Project Overview
-                  </button>
-                  <button
-                    onClick={() => setCurrentPage('resources')}
-                    className="text-white/80 hover:text-white transition-colors font-semibold"
-                  >
-                    Resources
-                  </button>
-                </div>
-                
+              <div className="mb-6">
+                <button
+                  onClick={() => {
+                    setSelectedIntervention(null);
+                    setCurrentPage('landing');
+                  }}
+                  className="text-white hover:text-white/90 flex items-center gap-2 transition-colors font-semibold bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg backdrop-blur-sm"
+                >
+                  ← Back to Home
+                </button>
+              </div>
+              <div className="text-center">
                 <h1 className="text-5xl font-bold text-white mb-3 drop-shadow-lg">Find What Works</h1>
                 <p className="text-xl text-white/90 drop-shadow">Explore evidence-based interventions</p>
               </div>
